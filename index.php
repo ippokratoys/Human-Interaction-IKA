@@ -5,14 +5,14 @@
     	<?php
     		include("refs.html")
     	?>
-       
+
     </head>
 <!-- Latest compiled and minified CSS -->
 <body>
-<?php 
+<?php
 	include("navbar.html");
 ?>
-	
+
 <br></br>
 
 <div class="container">

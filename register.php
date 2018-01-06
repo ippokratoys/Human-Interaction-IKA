@@ -2,9 +2,10 @@
 <html lang="el">
     <head>
     	<?php
-    		include("refs.html")
+    		include("refs.html");
     	?>
-
+      <link rel="stylesheet" href="css/register.css">
+      <script src="js/register.js"></script>
     </head>
 <!-- Latest compiled and minified CSS -->
 <body>
@@ -105,8 +106,8 @@
 							<button id="reg-button" type="button" class="btn btn-primary btn-lg btn-block login-button disabled">Εγγραφή</button>
 						</div>
 						<div class="login-register">
-				            <a href="login.html">Έχετε ήδη λογαριασμό? Συνδεθείτε</a>
-				         </div>
+			         <a href="login.html">Έχετε ήδη λογαριασμό? Συνδεθείτε</a>
+	         </div>
 					</form>
 				</div>
 			</div>

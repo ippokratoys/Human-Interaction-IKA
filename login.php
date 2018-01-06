@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="el">
-     <head>
+<html>
+    <head>
     	<?php
-    		include("refs.html")
+    		include("refs.html");
     	?>
-       
-    </head>
+      <link rel="stylesheet" href="css/register.css">
+
+  </head>
 <!-- Latest compiled and minified CSS -->
 <body>
-<?php 
+<?php
 	include("navbar.html");
 ?>
-    <br></br>
+    <br/><br/>
 
 		<div class="container">
 			<div class="row main">
