@@ -15,27 +15,27 @@
 	include("navbar.html");
 ?>
 <?php
-// define variables and set to empty values AMEEEEEE
+// define variables and set to empty values
 $errorMsg = "";
-$username = $password = "";
+$email = $password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["username"])) {/*Na allaksei se if not found sti vasi*/
-    $errorMsg = "Invalid username - password combination.";
+  if (empty($_POST["email"])) {/*Na allaksei se if not found sti vasi*/
+    $errorMsg = "Invalid email - password combination.";
   } else {
-    $username = test_input($_POST["username"]);
+    $email = test_input($_POST["email"]);
   }
   
   if (empty($_POST["password"])) {
-    $errorMsg = "Invalid username - password combination.";
+    $errorMsg = "Invalid email - password combination.";
   } else {
     $password = test_input($_POST["password"]);
   }
 
-  if (!empty($username) and !empty($password) and empty($errorMsg)) {
-  	$conn = connectToDB("localhost", "root", "", "tut");
+  if (!empty($email) and !empty($password) and empty($errorMsg)) {
+  	$conn = connectToDB("localhost", "root", "", "eamDatabase");
 
-  	$sql = "SELECT password FROM db WHERE username='".$username."'";
+  	$sql = "SELECT password FROM insuredPeople WHERE email='".$email."'";
   	$result = mysqli_query($conn, $sql);
 
   	if (mysqli_num_rows($result) > 0) {
@@ -45,10 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   			window.location = "index.php"
   			</script>';
   		}else{
-  			$errorMsg = "Invalid username - password combination.";
+  			$errorMsg = "Invalid email - password combination.";
   		}
   	}else{
-  		$errorMsg = "Invalid username - password combination.";
+  		$errorMsg = "Invalid email - password combination.";
   	}
 
     mysqli_close($conn);
@@ -88,11 +88,11 @@ function connectToDB($servername, $username, $password, $dbname)
 				<div class="main-login main-center">
 					<form class="form-horizontal" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Ψευδώνυμο</label>
+							<label for="email" class="cols-sm-2 control-label">Email</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Εισάγεται το ψευδώνυμο σας"/>
+									<input type="text" class="form-control" name="email" id="email"  placeholder="Εισάγεται το email σας"/>
 								</div>
 							</div>
 						</div>

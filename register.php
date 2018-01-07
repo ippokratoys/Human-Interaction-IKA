@@ -4,6 +4,9 @@
     	<?php
     		include("refs.html");
     	?>
+    	<style>
+		.error {color: #FF0000;}
+		</style>
       <link rel="stylesheet" href="css/register.css">
       <script src="js/register.js"></script>
     </head>
@@ -11,6 +14,74 @@
 <body>
 <?php
 	include("navbar.html");
+?>
+<?php
+// define variables and set to empty values
+$errorMsg = "";
+$name = $surname = $email = $password = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $errorMsg = "No field should be left empty.";
+  } else {
+    $name = test_input($_POST["name"]);
+  }
+
+  if (empty($_POST["surname"])) {
+    $errorMsg = "No field should be left empty.";
+  } else {
+    $surname = test_input($_POST["surname"]);
+  }
+
+  if (empty($_POST["email"])) {
+    $errorMsg = "No field should be left empty.";
+  } else {
+    $email = test_input($_POST["email"]);
+  }
+  
+  if (empty($_POST["password"])) {
+    $errorMsg = "No field should be left empty.";
+  } else {
+    $password = test_input($_POST["password"]);
+  }
+
+  if (!empty($name) and !empty($surname) and !empty($email) and !empty($password) and empty($errorMsg)) {
+  	$conn = connectToDB("localhost", "root", "", "eamDatabase");
+
+  	$sql = "INSERT INTO insuredPeople (name, surname, email, password) VALUES ('".$name."', '".$surname."', '".$email."', '".$password."')";
+  	$result = mysqli_query($conn, $sql);
+
+  	if ($result) {
+  		echo '<script type="text/javascript">
+  			window.location = "index.php"
+  			</script>';
+  	}else{
+  		$errorMsg = "Your registration application was not successful.";
+  	}
+
+    mysqli_close($conn);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+function connectToDB($servername, $username, $password, $dbname)
+{
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+	// Check connection
+	if (!$conn) {
+	    die("Connection to database failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+	return $conn;
+}
 ?>
     <br></br>
 
@@ -23,7 +94,7 @@
 	               	</div>
 	            </div>
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="#">
+					<form class="form-horizontal" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Όνομα <small>(λατινικοί χαρακτήρες)</small></label>
@@ -55,7 +126,7 @@
 							</div>
 						</div>
 
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="username" class="cols-sm-2 control-label">Ψευδώνυμο <small>(λατινικοί χαρακτήρες)</small></label>
 							<div class="cols-sm-10">
 								<div class="input-group">
@@ -63,7 +134,7 @@
 									<input type="text" class="form-control" name="username" id="username"  placeholder="Εισάγεται το ψευδώνυμο σας"/>
 								</div>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="form-group">
 							<label for="password" class="cols-sm-2 control-label">Κωδικός <small>(τουλάχιστον 7 χαρακτήρες)</small> </label>
@@ -102,11 +173,14 @@
                             </div>
                         </div>
 
+                        <span class="error"><?php echo $errorMsg;?></span>
+
 						<div class="form-group ">
-							<button id="reg-button" type="button" class="btn btn-primary btn-lg btn-block login-button disabled">Εγγραφή</button>
+							<!-- <button id="reg-button" type="button" class="btn btn-primary btn-lg btn-block login-button disabled">Εγγραφή</button> -->
+							<input type="submit" value="Εγγραφή" class="btn btn-primary btn-lg btn-block login-button disabled"></input>
 						</div>
 						<div class="login-register">
-			         <a href="login.html">Έχετε ήδη λογαριασμό? Συνδεθείτε</a>
+			         <a href="login.php">Έχετε ήδη λογαριασμό? Συνδεθείτε</a>
 	         </div>
 					</form>
 				</div>

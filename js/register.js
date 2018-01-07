@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("#name").keyup(enableRegister);
     $("#surname").keyup(enableRegister);
     $("#email").keyup(enableRegister);
-    $("#username").keyup(enableRegister);
+    //$("#username").keyup(enableRegister);
     $("#password").keyup(enableRegister);
     $("#confirm").keyup(enableRegister);
 });
@@ -30,10 +30,10 @@ function enableRegister() {
         disableRegister(true);
         return false;
     }
-    if($("#username").val()==""){
+    /*if($("#username").val()==""){
         disableRegister(true);
         return false;
-    }
+    }*/
 
     $("#some-empty").addClass("disabled");
     if(checkPass()==false){
