@@ -4,12 +4,76 @@
     		include("refs.html");
     	?>
       <link rel="stylesheet" href="css/register.css">
+      <style>
+		.error {color: #FF0000;}
+		</style>
 
   </head>
 <!-- Latest compiled and minified CSS -->
 <body>
 <?php
 	include("navbar.html");
+?>
+<?php
+// define variables and set to empty values AMEEEEEE
+$errorMsg = "";
+$username = $password = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["username"])) {/*Na allaksei se if not found sti vasi*/
+    $errorMsg = "Invalid username - password combination.";
+  } else {
+    $username = test_input($_POST["username"]);
+  }
+  
+  if (empty($_POST["password"])) {
+    $errorMsg = "Invalid username - password combination.";
+  } else {
+    $password = test_input($_POST["password"]);
+  }
+
+  if (!empty($username) and !empty($password) and empty($errorMsg)) {
+  	$conn = connectToDB("localhost", "root", "", "tut");
+
+  	$sql = "SELECT password FROM db WHERE username='".$username."'";
+  	$result = mysqli_query($conn, $sql);
+
+  	if (mysqli_num_rows($result) > 0) {
+  		$row = mysqli_fetch_assoc($result);
+  		if ($password == $row["password"]) {
+  			echo '<script type="text/javascript">
+  			window.location = "index.php"
+  			</script>';
+  		}else{
+  			$errorMsg = "Invalid username - password combination.";
+  		}
+  	}else{
+  		$errorMsg = "Invalid username - password combination.";
+  	}
+
+    mysqli_close($conn);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+function connectToDB($servername, $username, $password, $dbname)
+{
+	// Create connection
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+	// Check connection
+	if (!$conn) {
+	    die("Connection to database failed: " . mysqli_connect_error());
+	}
+	//echo "Connected successfully";
+	return $conn;
+}
 ?>
     <br/><br/>
 
@@ -22,7 +86,7 @@
 	               	</div>
 	            </div>
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="/login.html">
+					<form class="form-horizontal" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 						<div class="form-group">
 							<label for="username" class="cols-sm-2 control-label">Ψευδώνυμο</label>
 							<div class="cols-sm-10">
@@ -43,12 +107,15 @@
 							</div>
 						</div>
 
+						<span class="error"><?php echo $errorMsg;?></span>
+
 						<div class="form-group ">
-							<button id="login-button" type="button" class="btn btn-primary btn-lg btn-block login-button">Σύνδεση</button>
+							<!-- <button id="login-button" type="button" class="btn btn-primary btn-lg btn-block login-button">Σύνδεση</button> -->
+							<input type="submit" value="Σύνδεση" class="btn btn-primary btn-lg btn-block login-button"></input>
 						</div>
 
 						<div class="login-register">
-				            <a href="register.html">Δεν έχετε λογαριασμό? Δημιουργήστε</a>
+				            <a href="register.php">Δεν έχετε λογαριασμό? Δημιουργήστε</a>
 				         </div>
 					</form>
 				</div>
