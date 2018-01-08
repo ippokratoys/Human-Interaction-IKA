@@ -18,73 +18,68 @@
 <div class="container">
 
 <div class="row">
-	<div class="col-md-1   col-sm-1">
-	</div>
-	<div class="col-md-offset-2  col-sm-offset-2"  >
-
-	<div class="col-md-2  col-sm-2" >
-			<div class="card" style="width: 20rem;">
-			  <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap">
+	
+<!-- 	<div class="col-md-offset-2  col-sm-offset-2"  >
+ -->
+	<div class="col-lg-4 col-md-4  col-sm-4" >
+			<div class="card" >
+			  <a href="syntaksiouxoi.php"><img class="card-img-top" src="images/syntaksiouxoi.jpg" alt="Card image cap" style="width: 100%; heigit:100% ;"></a>
 			  <div class="card-body">
-			    <h4 class="card-title">Synta3ioyxoi</h4>
-			    <p class="card-text">.......................</p>
-			    <a href="syntaksiouxoi.php" class="btn btn-primary">Go somewhere</a>
+			   
+			    <a href="syntaksiouxoi.php" class="btn btn-primary" style="width: 100%;"><h4>Συνταξιούχοι</h4></a>
 			  </div>
 			</div>
 	</div>
-	<div class="col-md-2   col-sm-2">
+	<div class="col-lg-4 col-md-4  col-sm-4" >
 
-		<div class="card" style="width: 20rem;">
-		  <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap">
+		<div class="card" >
+		  <a href="ergazomenoi.php"><img class="card-img-top" src="images/Happy-construction-workers.jpg" alt="Card image cap" style="width: 100%; height:100%;"></a>
 		  <div class="card-body">
-		    <h4 class="card-title">Ergazomenoi</h4>
-		    <p class="card-text">......................</p>
-		    <a href="ergazomenoi.php" class="btn btn-primary">Go somewhere</a>
+		   
+		    <a href="ergazomenoi.php" class="btn btn-primary" style="width: 100%;"><h4>Εργαζόμενοι</h4></a>
 		  </div>
 		</div>
 	</div>
-	<div class="col-md-2   col-sm-2">
+	<div class="col-lg-4 col-md-4  col-sm-4" >
 
-		<div class="card" style="width: 20rem; ">
-		  <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap">
+		<div class="card">
+		  <a href="ergodoths.php"><img class="card-img-top" src="images/businessman.jpeg" alt="Card image cap" style="width: 100%;"></a>
 		  <div class="card-body">
-		    <h4 class="card-title">Ergodotes</h4>
-		    <p class="card-text">......................</p>
-		    <a href="ergodoths.php" class="btn btn-primary">Go somewhere</a>
+		    
+		    <a href="ergodoths.php" class="btn btn-primary " style="width: 100%;"><h4>Εργοδότες</h4></a>
 		  </div>
 		</div>
 	</div>
 	</div>
-</div>
+
+
+<br></br>
 
 <br></br>
 
 <div class="row">
-	<div class="col-md-2   col-sm-2"></div>
-
-	<div class="col-md-4   col-sm-4">
+	<div class="col-lg-3 col-md-3   col-sm-3">
+	</div>
+	<div class="  col-lg-3 col-md-3   col-sm-3">
 
 		<div class="card" >
-		  <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap" style="width: 30rem; height: 30rem;">
+		 <a href=#> <img class="card-img-top" src="images/faq.png" alt="Card image cap" style="width: 100%; height: 100%;"></a>
 		  <div class="card-block">
-		    <h4 class="card-title">Syxnes erwthseis</h4>
+		    
 
-		    <p class="card-text">.......................</p>
-		    <a href="#" class="btn btn-primary">Go somewhere</a>
+		    <a href="#" class="btn btn-primary" style="width: 100%;"><h4>Συχνές Ερωτήσεις</h4></a>
 
 
 		  </div>
 		</div>
 	</div>
-	<div class="col-md-4   col-sm-4">
+	<div class="col-lg-3 col-md-3   col-sm-3">
 
 		<div class="card" >
-		  <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap" style="width: 30rem; height: 30rem;">
+		  <a href="#"><img class="card-img-top" src="images/map.jpg" alt="Card image cap" style="width: 100%; height: 80%;"></a>
 		  <div class="card-block">
-		    <h4 class="card-title">Epikoinwnia/ diktyo katasthmatwn</h4>
-
-		    <p class="card-text">.......................</p>
-  		    <a href="#" class="btn btn-primary">Go somewhere</a>
+		   
+  		    <a href="#" class="btn btn-primary" style="width: 100%; height: 80%;"><h4>Επικοινωνία & <br> Δίκτυο Καταστήματων</h4></a>
 
 		  </div>
 		</div>
@@ -192,6 +187,6 @@
   </div>
   <button type="submit" class="btn btn-default">Send invitation</button>
 </form> -->
-
+</div>
 </body>
 </html>
