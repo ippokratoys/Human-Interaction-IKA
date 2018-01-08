@@ -21,15 +21,7 @@
 	
 <!-- 	<div class="col-md-offset-2  col-sm-offset-2"  >
  -->
-	<div class="col-lg-4 col-md-4  col-sm-4" >
-			<div class="card" >
-			  <a href="syntaksiouxoi.php"><img class="card-img-top" src="images/syntaksiouxoi.jpg" alt="Card image cap" style="width: 100%; heigit:100% ;"></a>
-			  <div class="card-body">
-			   
-			    <a href="syntaksiouxoi.php" class="btn btn-primary" style="width: 100%;"><h4>Συνταξιούχοι</h4></a>
-			  </div>
-			</div>
-	</div>
+	
 	<div class="col-lg-4 col-md-4  col-sm-4" >
 
 		<div class="card" >
@@ -50,14 +42,43 @@
 		  </div>
 		</div>
 	</div>
+	<div class="col-lg-4 col-md-4  col-sm-4" >
+			<div class="card" >
+			  <a href="syntaksiouxoi.php"><img class="card-img-top" src="images/syntaksiouxoi.jpg" alt="Card image cap" style="width: 100%; heigit:100% ;"></a>
+			  <div class="card-body">
+			   
+			    <a href="syntaksiouxoi.php" class="btn btn-primary" style="width: 100%;"><h4>Συνταξιούχοι</h4></a>
+			  </div>
+			</div>
+	</div>
 	</div>
 
 
 <br></br>
 
 <br></br>
-
 <div class="row">
+	<div class="col-lg-6 col-md-6  col-sm-6" >
+			<div class="card" >
+			  <a href="syntaksiouxoi.php"><img class="card-img-top" src="images/disable.jpg" alt="Card image cap" style="width: 100%; heigit:100% ;"></a>
+			  <div class="card-body">
+			   
+			    <a href="syntaksiouxoi.php" class="btn btn-primary" style="width: 100%;"><h4>Άτομα με <br>ειδικές ανάγκες</h4></a>
+			  </div>
+			</div>
+	</div>
+	<div class="col-lg-6 col-md-6  col-sm-6" >
+			<div class="card" >
+			  <a href="syntaksiouxoi.php"><img class="card-img-top" src="images/genika.jpg" alt="Card image cap" style="width: 100%; height:95% ;"></a>
+			  <div class="card-body">
+			   
+			    <a href="syntaksiouxoi.php" class="btn btn-primary" style="width: 100%;"><h4>Άτομα με <br>ειδικές ανάγκες</h4></a>
+			  </div>
+			</div>
+	</div>
+</div>
+<div class="row">
+
 	<div class="col-lg-3 col-md-3   col-sm-3">
 	</div>
 	<div class="  col-lg-3 col-md-3   col-sm-3">
