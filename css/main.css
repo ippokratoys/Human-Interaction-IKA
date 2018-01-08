@@ -1,3 +1,31 @@
 body, html{
  	font-family: sans-serif;
+    background-color:  #eff5f5;
+}
+
+
+#workers-grid img{
+    object-fit: cover;
+    max-height: 200px;
+    width: 100%;
+}
+
+#workers-grid .card{
+    width: 100%;
+}
+
+#workers-grid .btn-primary{
+    width: 100%;
+    margin-top: 10px;
+}
+
+#workers-grid .card-tile{
+    font-weight: bold;
+    /*background-color: gray;*/
+}
+
+#workers-grid{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /*color: black;*/
 }
