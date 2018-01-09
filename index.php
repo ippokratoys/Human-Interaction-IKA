@@ -78,13 +78,6 @@
 		</div>
 	</div>
 </div>
-<div class="row" id="home-text">
-    <hr></hr>
-    <div class="col-sm-6">
-    </div>
-    <div class="col-sm-6">
-    </div>
-</div>
 <div class="row">
 	<div class="  col-lg-6 col-md-6   col-sm-6">
 
@@ -107,7 +100,6 @@
               <p class="text-welcome">
                   Αν δεν βρείτε αυτό που ψάχνεται μπορείται να χρησημοποιείσεται την αναζήτηση καθώς και να εποικινωνισετε μαζί μας με του διαθεσημου τρόπους (μεσο της αντιστοιχης σελίδας).
                   Βρείτε την ακριβή τοποθεσία των καταστημάτων ΙΚΑ που σας ενδιαφέρουν, καθώς και τα τηλεφωνα επικοινωνίας και τα ωράρια λειτουργίας.
-
               </p>
               <a href=#> <img class="card-img-top" src="images/map.jpg" alt="Card image cap" style="min-width:100% ; height:100% ; max-height:300px"></a>
 		      <a href="#" class="btn btn-primary" style="width: 100%;"><h4>Επικοινωνία & Δίκτυο Καταστήματων</h4></a>

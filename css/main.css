@@ -6,7 +6,7 @@ body, html{
 
 #workers-grid img{
     object-fit: cover;
-    max-height: 200px;
+    max-height: 190px;
     width: 100%;
 }
 
@@ -128,6 +128,7 @@ body, html{
 }
 
 .text-welcome{
+    margin-top: 35px;
     background-color: lightgray;
     padding: 20px;
 }
