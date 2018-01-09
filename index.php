@@ -78,13 +78,7 @@
 		</div>
 	</div>
 </div>
-<div class="row" id="home-text">
-    <hr></hr>
-    <div class="col-sm-6">
-    </div>
-    <div class="col-sm-6">
-    </div>
-</div>
+
 <div class="row">
 	<div class="  col-lg-6 col-md-6   col-sm-6">
 
