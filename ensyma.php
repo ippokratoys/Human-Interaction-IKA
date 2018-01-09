@@ -39,6 +39,42 @@
                 </div>
                 <div class="main-login main-center">
                   <form class="form-horizontal" method="post">
+                   <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Όνομα</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                 
+                                    <input type="text" class="form-control" name="Όνομα" id="years"  placeholder="Εισάγεται όνομα"/>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Επίθετο</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                 
+                                    <input type="text" class="form-control" name="Όνομα" id="years"  placeholder="Εισάγεται έπίθετο"/>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Αριθμός Ταυτότητας</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                 
+                                    <input type="text" class="form-control" name="Όνομα" id="years"  placeholder="Αριθμός Ταυτότητας"/>
+                                </div>
+                            </div>
+                        </div>
+                   <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">ΑΦΜ</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                 
+                                    <input type="text" class="form-control" name="ΑΦΜ" id="years"  placeholder="Εισάγεται ΑΦΜ"/>
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="password" class="cols-sm-2 control-label">Πλήθος ενσύμων</label>
                             <div class="cols-sm-10">
