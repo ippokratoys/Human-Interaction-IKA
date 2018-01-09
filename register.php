@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $email = test_input($_POST["email"]);
   }
-  
+
   if (empty($_POST["password"])) {
     $errorMsg = "No field should be left empty.";
   } else {
@@ -180,7 +180,7 @@ function connectToDB($servername, $username, $password, $dbname)
 
 						<div class="form-group ">
 							<!-- <button id="reg-button" type="button" class="btn btn-primary btn-lg btn-block login-button disabled">Εγγραφή</button> -->
-							<input type="submit" value="Εγγραφή" class="btn btn-primary btn-lg btn-block login-button disabled"></input>
+							<input id="reg-button" type="submit" value="Εγγραφή" class="btn btn-primary btn-lg btn-block login-button disabled"></input>
 						</div>
 						<div class="login-register">
 			         <a href="login.php">Έχετε ήδη λογαριασμό? Συνδεθείτε</a>
