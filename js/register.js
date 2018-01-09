@@ -8,7 +8,7 @@ $(document).ready(function(){
 });
 
 function disableRegister(withMsg) {
-    $("#reg-button").addClass('disabled');
+    $("#reg-button").prop('disabled',true);
     if(withMsg===true){
         $("#some-empty").removeClass("hidden");
     }else{
@@ -35,12 +35,12 @@ function enableRegister() {
         return false;
     }*/
 
-    $("#some-empty").addClass("disabled");
+    $("#some-empty").addClass("hidden");
     if(checkPass()==false){
         disableRegister(false);
         return false;
     }
-    $("#reg-button").removeClass('disabled');
+    $("#reg-button").prop('disabled',false);
 }
 
 function checkPass() {

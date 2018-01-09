@@ -46,18 +46,33 @@
             <div id="main-cont" class="container-fluid">
                 <h1>Τα στοιχεία μου</h1>
                 <form id="my-infos">
-                    <label for="f-name" >Όνομα</label>
-                    <input type="text" id="f-name" name="name" value="Onoma"/>
-                    <p id="name-txt" class="hidden"></p>
-                    <br>
+                    <div class="row">
+                        <div class="well col-sm-3">
+                            <label for="f-name" >Όνομα</label>
+                            <input type="text" id="f-name" name="name" value="Onoma"/>
+                            <p id="name-txt" class="hidden"></p>
+                        <!-- </div> -->
 
-                    <label for="f-surname" >Επίθετο</label>
-                    <input type="text" id="f-surname" name="surname" value="epitheto"/>
-                    <p id="surname-txt" class="hidden"></p>
-                    <br>
+                        <!-- <div class="well"> -->
+                            <label for="f-surname" >Επίθετο</label>
+                            <input type="text" id="f-surname" name="surname" value="epitheto"/>
+                            <p id="surname-txt" class="hidden"></p>
+                        </div>
 
-                    <input type="submit" class="btn btn-primary" value="Υποβολή" id="submit-edit-infos"/>
+                        <div class="well col-sm-3">
+                            <label for="f-amka" >ΑΜΚΑ</label>
+                            <input type="text" id="f-amka" name="amka" value="12345213"/>
+                            <p id="amka-txt" class="hidden"></p>
+                        <!-- </div> -->
 
+                        <!-- <div class="well"> -->
+                            <label for="f-afm" >ΑΦΜ</label>
+                            <input type="text" id="f-afm" name="afm" value="00123452"/>
+                            <p id="afm-txt" class="hidden"></p>
+                        </div>
+                        <br>
+                        <input type="submit" class="btn btn-primary" value="Υποβολή" id="submit-edit-infos"/>
+                    </div>
                 </form>
                 <button class="btn btn-primary" id="edit-infos"> Επεξεργασία</button>
                 <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> -->

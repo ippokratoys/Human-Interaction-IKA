@@ -26,11 +26,11 @@
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
-        		  <img src="images/enshma.jpg" alt="Card image cap"/>
+        		  <a href="ensyma.php"><img src="images/enshma.jpg" alt="Card image cap"/></a>
         		  <div class="card-body">
         		    <h4 class="card-title">Υπολογισμός ενσήμων</h4>
         		    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται πόσα ένσημα έχεται</p>
-        		    <a href="#" class="btn btn-primary" >Υπολογισμός  ενσήμων</a>
+        		    <a href="ensyma.php" class="btn btn-primary" >Υπολογισμός  ενσήμων</a>
         		  </div>
         		</div>
     		</div>
