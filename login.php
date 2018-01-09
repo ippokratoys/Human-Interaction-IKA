@@ -3,6 +3,7 @@
     	<?php
     		include("refs.html");
     	?>
+    	<meta charset=UTF-8>
       <link rel="stylesheet" href="css/register.css">
       <style>
 		.error {color: #FF0000;}
@@ -34,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (!empty($email) and !empty($password) and empty($errorMsg)) {
   	$conn = connectToDB("localhost", "root", "", "eamDatabase");
+  	mysqli_set_charset($conn, 'utf8');
 
   	$sql = "SELECT password FROM insuredPeople WHERE email='".$email."'";
   	$result = mysqli_query($conn, $sql);
