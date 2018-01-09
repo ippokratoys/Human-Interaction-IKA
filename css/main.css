@@ -126,3 +126,8 @@ body, html{
 #second-row .card{
     margin: 10px;
 }
+
+.text-welcome{
+    background-color: lightgray;
+    padding: 20px;
+}
