@@ -132,3 +132,7 @@ body {
   position: absolute;
   margin-right: -250px;
 }
+
+#main-cont .well{
+    margin: 10px;
+}

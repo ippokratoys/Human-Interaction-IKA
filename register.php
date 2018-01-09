@@ -179,8 +179,8 @@ function connectToDB($servername, $username, $password, $dbname)
                         <span class="error"><?php echo $errorMsg;?></span>
 
 						<div class="form-group ">
-							<!-- <button id="reg-button" type="button" class="btn btn-primary btn-lg btn-block login-button disabled">Εγγραφή</button> -->
-							<input id="reg-button" type="submit" value="Εγγραφή" class="btn btn-primary btn-lg btn-block login-button disabled"></input>
+							<button type="submit" id="reg-button" disabled="true" class=" btn btn-primary btn-lg btn-block login-button ">Εγγραφή</button>
+							<!-- <input id="reg-button" type="submit" value="Εγγραφή" class="btn btn-primary btn-lg btn-block login-button disabled"></input> -->
 						</div>
 						<div class="login-register">
 			         <a href="login.php">Έχετε ήδη λογαριασμό? Συνδεθείτε</a>
