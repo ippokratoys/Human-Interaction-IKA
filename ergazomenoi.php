@@ -26,7 +26,7 @@
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
-        		  <img src="images/enshma.jpg" alt="Card image cap">
+        		  <img src="images/enshma.jpg" alt="Card image cap"/>
         		  <div class="card-body">
         		    <h4 class="card-title">Υπολογισμός ενσήμων</h4>
         		    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται πόσα ένσημα έχεται</p>
@@ -37,9 +37,9 @@
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
-        		  <img src="images/calculator.jpg" alt="Card image cap">
+        		  <img src="images/calculator.jpg" alt="Card image cap"/>
         		  <div class="card-body">
-        		    <h4 class="card-title">Υπολογισμός ενσήμων</h4>
+        		    <h4 class="card-title">Υπολογισμός Σύνταξης</h4>
                     <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται πόσα ένσημα έχεται</p>
         		    <a href="#" class="btn btn-primary" >Υπολογισμός χρόνων για σύνταξη</a>
         		  </div>
@@ -48,7 +48,7 @@
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
-        		  <img src="images/upeuthini_dilosi.png" alt="Card image cap">
+        		  <img src="images/upeuthini_dilosi.png" alt="Card image cap"/>
         		  <div class="card-body">
         		    <h4 class="card-title">Αιτηση Συνταξιοδότησης</h4>
                     <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να κάνεται αίτηση συνταξιοδότησης ηλεκτρονικά <small>(απαιτεί λογαριασμό)</small>. Μπορείται να παρακουληθήσεται την πορεία της αίτησης σας κάνοντας σύνδαιση τον λογαριασμό σας.</p>

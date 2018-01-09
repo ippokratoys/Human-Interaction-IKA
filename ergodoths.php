@@ -13,37 +13,49 @@
 	include("navbar.html");
 ?>
 
-<br></br>
+<!-- <br></br> -->
 
 <div class="container">
+    <div class="row">
+        <h3>Εργοδότες</h3>
+    </div>
+    <div class="row" id="workers-grid">
+    	<!-- <div class="col-md-1   col-sm-1">
+    	</div> -->
+        <div class="" >
 
-<div class="row">
-	<!-- <div class="col-md-1   col-sm-1">
-	</div> -->
-	<div class="col-md-offset-1  col-sm-offset-1"  >
+            <div class="col-md-4  col-sm-4" >
+        		<div class="card">
+        		  <img src="images/proslipsi.jpeg" alt="Πρόσληψη"/>
+        		  <div class="card-body">
+        		    <h4 class="card-title">Αιτηση Πρόσληψης Εργαζόμενου</h4>
+        		    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται ηλεκτρονικά να υποβάλεται αίτηση πρόσληψης εργαζόμενου.</p>
+        		    <a href="#" class="btn btn-primary" >Υπολογισμός  ενσήμων</a>
+        		  </div>
+        		</div>
+    		</div>
 
-		<div class="col-md-2  col-sm-2" >
-				<div class="card" style="width: 20rem;">
-				  <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap">
-				  <div class="card-body">
-				    <h4 class="card-title">Καταχώρηση νέων υπαλλήλων</h4>
-				    <p class="card-text">.......................</p>
-				    <a href="#" class="btn btn-primary">Go somewhere</a>
-				  </div>
-				</div>
-		</div>
-		<div class="col-md-2   col-sm-2">
+            <div class="col-md-4  col-sm-4" >
+        		<div class="card">
+        		  <img src="images/eisfores.jpg" alt="εισφορες"/>
+        		  <div class="card-body">
+        		    <h4 class="card-title">Υπολογισμός oφειλομένων εισφορών</h4>
+                    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται τις εισφορές που χρωστάετε στον εργοδότη.</p>
+        		    <a href="#" class="btn btn-primary" >Υπολογισμός εισφορών</a>
+        		  </div>
+        		</div>
+    		</div>
 
-			<div class="card" style="width: 20rem;">
-			  <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap">
-			  <div class="card-body">
-			    <h4 class="card-title">Οικονομική καρτέλα εργοδότη</h4>
-			    <p class="card-text">......................</p>
-			    <a href="#" class="btn btn-primary">Go somewhere</a>
-			  </div>
-			</div>
-		</div>
-
+            <div class="col-md-4  col-sm-4" >
+        		<div class="card">
+        		  <img src="images/asfalistiki_enimerotita.jpg" alt="Βεβαίωση Ασφαλιστικής Ενημερότητας"/>
+        		  <div class="card-body">
+        		    <h4 class="card-title">Βεβαίωση Ασφαλιστικής Ενημερότητας</h4>
+                    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να εκδώσετε ηλεκτρονικά βεβαίωση ασφαλιστικής ενημερότητας και να την εκτυπώσετε.</p>
+        		    <a href="#" class="btn btn-primary" >Ασφαλιστικής Ενημερότητας</a>
+        		  </div>
+        		</div>
+    		</div>
 		</div>
 	</div>
 </div>
