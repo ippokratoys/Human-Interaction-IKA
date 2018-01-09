@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="el">
     <head>
+    	<meta charset=UTF-8>
     	<?php
     		include("refs.html");
     	?>
@@ -47,6 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (!empty($name) and !empty($surname) and !empty($email) and !empty($password) and empty($errorMsg)) {
   	$conn = connectToDB("localhost", "root", "", "eamDatabase");
+
+  	mysqli_set_charset($conn, 'utf8');
 
   	$sql = "INSERT INTO insuredPeople (name, surname, email, password) VALUES ('".$name."', '".$surname."', '".$email."', '".$password."')";
   	$result = mysqli_query($conn, $sql);
