@@ -1,11 +1,31 @@
 $(document).ready(function(){
-    $("#name").keyup(enableRegister);
-    $("#surname").keyup(enableRegister);
-    $("#email").keyup(enableRegister);
-    $("#amka").keyup(enableRegister);
+    // $("#name").keyup(enableRegister);
+    // $("#surname").keyup(enableRegister);
+    // $("#email").keyup(enableRegister);
+    // $("#amka").keyup(enableRegister);
+    //
+    // $("#password").keyup(enableRegister);
+    // $("#confirm").keyup(enableRegister);
 
-    $("#password").keyup(enableRegister);
-    $("#confirm").keyup(enableRegister);
+    $("#ensyma_calc").submit(function (e) {
+        e.preventDefault();
+
+        if( $("#afm").val().length<7 ){
+            alert("Το ΑΦΜ δεν είναι έγκυρο (λίγα ψηφία)");
+            return false;
+        }
+        if($("#amka").val().length<7){
+            alert("Το ΑΜΚΑ δεν είναι έγκυρο (λίγα ψηφία)");
+            return true;
+        }
+
+        var afm = $("#afm").val();
+        var amka = $("#amka").val();
+
+        $("#theNumber-modal").html(afm/2%10000);
+        $("#afm-modal").html(afm);
+        $("#ensimaModal").modal();
+    });
 });
 
 function disableRegister(withMsg) {
@@ -46,20 +66,4 @@ function enableRegister() {
         return false;
     }
     $("#reg-button").prop('disabled',false);
-}
-
-function checkPass() {
-    if ($("#password").val().length<7) {
-        $("#small-pass").removeClass("hidden");
-        return false;
-    }
-    $("#small-pass").addClass("hidden");
-
-    if($("#password").val()==$("#confirm").val()){
-        $("#not-matching").addClass("hidden");
-        return true;
-    }else{
-        $("#not-matching").removeClass("hidden");
-        return false;
-    }
 }

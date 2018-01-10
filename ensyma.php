@@ -16,20 +16,18 @@
 
     <div id="wrapper">
 
-       
+
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
           <?php
             include("navbar.html");
           ?>
 
-            
+
         <!-- /#page-content-wrapper -->
-        </div>
     <!-- /#wrapper -->
-                 <div class="container">
+         <div class="container">
             <div class="row main">
                 <div class="panel-heading">
                    <div class="panel-title text-center">
@@ -38,62 +36,44 @@
                     </div>
                 </div>
                 <div class="main-login main-center">
-                  <form class="form-horizontal" method="post">
-                   <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Όνομα</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                 
-                                    <input type="text" class="form-control" name="Όνομα" id="years"  placeholder="Εισάγεται όνομα"/>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Επίθετο</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                 
-                                    <input type="text" class="form-control" name="Όνομα" id="years"  placeholder="Εισάγεται έπίθετο"/>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Αριθμός Ταυτότητας</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                 
-                                    <input type="text" class="form-control" name="Όνομα" id="years"  placeholder="Αριθμός Ταυτότητας"/>
-                                </div>
-                            </div>
-                        </div>
-                   <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">ΑΦΜ</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                 
-                                    <input type="text" class="form-control" name="ΑΦΜ" id="years"  placeholder="Εισάγεται ΑΦΜ"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Πλήθος ενσύμων</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                 
-                                    <input type="text" class="form-control" name="Πλήθος ενσύμων" id="years"  placeholder="Εισάγεται πλήθος ενσύμων"/>
-                                </div>
-                            </div>
-                        </div>
+                  <form class="form-horizontal" method="post" id="ensyma_calc">
 
-                        <div class="form-group">
-                            <label for="password" class="cols-sm-2 control-label">Πλήθος των ετών εργασίας</label>
-                            <div class="cols-sm-10">
-                                <div class="input-group">
-                                 
-                                    <input type="text" class="form-control" name="Πλήθος των ετών εργασίας" id="years"  placeholder="Εισάγεται τον χρόνια υπηρεσίας σας"/>
-                                </div>
+                   <div class="form-group">
+                        <label for="amka" class="cols-sm-2 control-label">ΑΜΚΑ</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input required="true" type="number" class="form-control" name="amka" id="amka"  placeholder="Εισάγεται AMKA"/>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="afm" class="cols-sm-2 control-label">ΑΦΜ</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input required="true" type="number" class="form-control" name="ΑΦΜ" id="afm"  placeholder="Εισάγεται ΑΦΜ"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tautotita" class="cols-sm-2 control-label">Αριθμός Ταυτότητας</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+
+                                <input required="true" type="text" class="form-control" name="tautotita" id="tautotita"  placeholder="Αριθμός Ταυτότητας"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="etoi" class="cols-sm-2 control-label">Πλήθος των ετών εργασίας </label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <input required="true" type="text" class="form-control" name="etoi" id="etoi"  placeholder="Εισάγεται τον χρόνια υπηρεσίας σας"/>
+                            </div>
+                        </div>
+                    </div>
 
 
                         <div class="form-group ">
@@ -101,13 +81,32 @@
                             <input type="submit" value="Υπολογισμός" class="btn btn-primary btn-lg btn-block login-button"></input>
                         </div>
 
-                        <div class="login-register">
-                            <a href="login.php">Δεν έχετε συνδεθεί? Συνδεθείτε</a>
-                         </div>
                     </form>
                 </div>
             </div>
         </div>
+
+        <div id="ensimaModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Πλήθος ενσήμων</h4>
+              </div>
+              <div class="modal-body">
+                <p> Τα ένσημα του εργαζομένου με ΑΦΜ <span id="afm-modal"></span>, είναι <span id="theNumber-modal"></span></p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <script src="js/ensima.js"></script>
 </body>
 
 </html>
