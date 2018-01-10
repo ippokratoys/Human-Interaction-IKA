@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
     <head>
     	<?php
@@ -22,13 +25,13 @@ $email = $password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["email"])) {/*Na allaksei se if not found sti vasi*/
-    $errorMsg = "Invalid email - password combination.";
+    $errorMsg = "Μη έγκυρος συνδυασμός κωδικού - email.";
   } else {
     $email = test_input($_POST["email"]);
   }
   
   if (empty($_POST["password"])) {
-    $errorMsg = "Invalid email - password combination.";
+    $errorMsg = "Μη έγκυρος συνδυασμός κωδικού - email.";
   } else {
     $password = test_input($_POST["password"]);
   }
@@ -37,20 +40,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   	$conn = connectToDB("localhost", "root", "", "eamDatabase");
   	mysqli_set_charset($conn, 'utf8');
 
-  	$sql = "SELECT password FROM insuredPeople WHERE email='".$email."'";
+  	$sql = "SELECT password FROM user WHERE email='".$email."'";
   	$result = mysqli_query($conn, $sql);
 
   	if (mysqli_num_rows($result) > 0) {
   		$row = mysqli_fetch_assoc($result);
   		if ($password == $row["password"]) {
+  			$_SESSION["useremail"] = $email;
   			echo '<script type="text/javascript">
   			window.location = "index.php"
   			</script>';
   		}else{
-  			$errorMsg = "Invalid email - password combination.";
+  			$errorMsg = "Μη έγκυρος συνδυασμός κωδικού - email.";
   		}
   	}else{
-  		$errorMsg = "Invalid email - password combination.";
+  		$errorMsg = "Μη έγκυρος συνδυασμός κωδικού - email.";
   	}
 
     mysqli_close($conn);

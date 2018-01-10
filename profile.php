@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +14,40 @@
 </head>
 
 <body>
+    <?php
+        $conn = connectToDB("localhost", "root", "", "eamDatabase");
+        mysqli_set_charset($conn, 'utf8');
+
+        $sql = "SELECT name, surname, amka, afm FROM user WHERE email='".$_SESSION["useremail"]."'";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $name = $row["name"];
+            $surname = $row["surname"];
+            $amka = $row["amka"];
+            $afm = $row["afm"];
+        }else{
+            $name = "";
+            $surname = "";
+            $amka = "";
+            $afm = "";
+        }
+        mysqli_close($conn);
+
+        function connectToDB($servername, $username, $password, $dbname)
+        {
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+            // Check connection
+            if (!$conn) {
+                die("Connection to database failed: " . mysqli_connect_error());
+            }
+            //echo "Connected successfully";
+            return $conn;
+        }
+    ?>
 
 
 
@@ -49,25 +86,25 @@
                     <div class="row">
                         <div class="well col-sm-3">
                             <label for="f-name" >Όνομα</label>
-                            <input type="text" id="f-name" name="name" value="Onoma"/>
+                            <input type="text" id="f-name" name="name" value=<?php echo $name;?>>
                             <p id="name-txt" class="hidden"></p>
                         <!-- </div> -->
 
                         <!-- <div class="well"> -->
                             <label for="f-surname" >Επίθετο</label>
-                            <input type="text" id="f-surname" name="surname" value="epitheto"/>
+                            <input type="text" id="f-surname" name="surname" value=<?php echo $surname;?>>
                             <p id="surname-txt" class="hidden"></p>
                         </div>
 
                         <div class="well col-sm-3">
                             <label for="f-amka" >ΑΜΚΑ</label>
-                            <input type="text" id="f-amka" name="amka" value="12345213"/>
+                            <input type="text" id="f-amka" name="amka" value=<?php echo $amka;?>>
                             <p id="amka-txt" class="hidden"></p>
                         <!-- </div> -->
 
                         <!-- <div class="well"> -->
                             <label for="f-afm" >ΑΦΜ</label>
-                            <input type="text" id="f-afm" name="afm" value="00123452"/>
+                            <input type="text" id="f-afm" name="afm" value=<?php echo $afm;?>>
                             <p id="afm-txt" class="hidden"></p>
                         </div>
                         <br>

@@ -23,25 +23,25 @@ $name = $surname = $email = $password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
-    $errorMsg = "No field should be left empty.";
+    $errorMsg = "Κανένα πεδίο δεν πρέπει να είναι κενό.";
   } else {
     $name = test_input($_POST["name"]);
   }
 
   if (empty($_POST["surname"])) {
-    $errorMsg = "No field should be left empty.";
+    $errorMsg = "Κανένα πεδίο δεν πρέπει να είναι κενό.";
   } else {
     $surname = test_input($_POST["surname"]);
   }
 
   if (empty($_POST["email"])) {
-    $errorMsg = "No field should be left empty.";
+    $errorMsg = "Κανένα πεδίο δεν πρέπει να είναι κενό.";
   } else {
     $email = test_input($_POST["email"]);
   }
 
   if (empty($_POST["password"])) {
-    $errorMsg = "No field should be left empty.";
+    $errorMsg = "Κανένα πεδίο δεν πρέπει να είναι κενό.";
   } else {
     $password = test_input($_POST["password"]);
   }
@@ -51,15 +51,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   	mysqli_set_charset($conn, 'utf8');
 
-  	$sql = "INSERT INTO insuredPeople (name, surname, email, password) VALUES ('".$name."', '".$surname."', '".$email."', '".$password."')";
+  	$sql = "SELECT password FROM user WHERE email='".$email."'";
   	$result = mysqli_query($conn, $sql);
 
-  	if ($result) {
-  		echo '<script type="text/javascript">
-  			window.location = "index.php"
-  			</script>';
+  	if (mysqli_num_rows($result) > 0) {
+  		$row = mysqli_fetch_assoc($result);
+  		$errorMsg = "Το email αυτό πιθανόν να χρησιμοποιείται ήδη. Δοκιμάστε να "."<a href=\"login.php\">συνδεθείτε.</a>";
   	}else{
-  		$errorMsg = "Your registration application was not successful.";
+  		$sql = "INSERT INTO user (name, surname, email, password) VALUES ('".$name."', '".$surname."', '".$email."', '".$password."')";
+	  	$result = mysqli_query($conn, $sql);
+
+	  	if ($result) {
+	  		echo '<script type="text/javascript">
+	  			window.location = "index.php"
+	  			</script>';
+	  	}else{
+	  		$errorMsg = "Η εγγραφή σας ήταν ανεπιτυχής.";
+	  	}
   	}
 
     mysqli_close($conn);
