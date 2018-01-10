@@ -45,6 +45,10 @@
 
             <div id="main-cont" class="container-fluid">
                 <h1>Τα στοιχεία μου</h1>
+                <div class="hidden" id="change-info">
+                    <p>Επεξεργαστείτε τα στοιχεία που σας ενδιαφέρου και πατήστε υποβολή.</p>
+                    <small> Δεν μπορείται να αλλάξετε το email σας.</small>
+                </div>
                 <form id="my-infos">
                     <div class="row">
                         <div class="well col-sm-3">
@@ -57,6 +61,10 @@
                             <label for="f-surname" >Επίθετο</label>
                             <input type="text" id="f-surname" name="surname" value="epitheto"/>
                             <p id="surname-txt" class="hidden"></p>
+
+                            <label for="f-email" >Email</label>
+                            <input readonly="true" type="text" id="f-email" name="email" value="geo@email.com"/>
+                            <p id="email-txt" class="hidden"></p>
                         </div>
 
                         <div class="well col-sm-3">
@@ -66,13 +74,13 @@
                         <!-- </div> -->
 
                         <!-- <div class="well"> -->
-                            <label for="f-afm" >ΑΦΜ</label>
+                            <!-- <label for="f-afm" >ΑΦΜ</label>
                             <input type="text" id="f-afm" name="afm" value="00123452"/>
-                            <p id="afm-txt" class="hidden"></p>
+                            <p id="afm-txt" class="hidden"></p> -->
                         </div>
                         <br>
-                        <input type="submit" class="btn btn-primary" value="Υποβολή" id="submit-edit-infos"/>
                     </div>
+                    <input type="submit" class="btn btn-primary" value="Υποβολή" id="submit-edit-infos"/>
                 </form>
                 <button class="btn btn-primary" id="edit-infos"> Επεξεργασία</button>
                 <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> -->

@@ -2,7 +2,8 @@ $(document).ready(function(){
     $("#name").keyup(enableRegister);
     $("#surname").keyup(enableRegister);
     $("#email").keyup(enableRegister);
-    //$("#username").keyup(enableRegister);
+    $("#amka").keyup(enableRegister);
+    
     $("#password").keyup(enableRegister);
     $("#confirm").keyup(enableRegister);
 });
@@ -27,6 +28,10 @@ function enableRegister() {
         return false;
     }
     if($("#email").val()==""){
+        disableRegister(true);
+        return false;
+    }
+    if($("#amka").val()==""){
         disableRegister(true);
         return false;
     }
