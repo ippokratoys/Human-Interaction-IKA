@@ -28,12 +28,19 @@
         <!-- /#page-content-wrapper -->
     <!-- /#wrapper -->
          <div class="container">
+          <h3>Υπολογισμός Ενσύμων</h3>
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
+        <li class="breadcrumb-item">Εργαζόμενοι</li>
+        <li class="breadcrumb-item active">Υπολογισμός Ενσύμων</li>
+
+        </ol>
             <div class="row main">
                 <div class="panel-heading">
-                   <div class="panel-title text-center">
+                   <!-- <div class="panel-title text-center">
                         <h1 class="title">ΙΚΑ ΥΠΟΛΟΓΙΣΜΟΣ ΕΝΣΥΜΩΝ</h1>
                         <hr />
-                    </div>
+                    </div> -->
                 </div>
                 <div class="main-login main-center">
                   <form class="form-horizontal" method="post" id="ensyma_calc">
