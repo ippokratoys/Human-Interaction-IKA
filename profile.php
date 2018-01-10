@@ -18,16 +18,18 @@ session_start();
         $conn = connectToDB("localhost", "root", "", "eamDatabase");
         mysqli_set_charset($conn, 'utf8');
 
-        $sql = "SELECT name, surname, amka, afm FROM user WHERE email='".$_SESSION["useremail"]."'";
+        $sql = "SELECT email, name, surname, amka, afm FROM user WHERE email='".$_SESSION["useremail"]."'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
+            $email = $row["email"];
             $name = $row["name"];
             $surname = $row["surname"];
             $amka = $row["amka"];
             $afm = $row["afm"];
         }else{
+            $email = "";
             $name = "";
             $surname = "";
             $amka = "";
@@ -100,7 +102,7 @@ session_start();
                             <p id="surname-txt" class="hidden"></p>
 
                             <label for="f-email" >Email</label>
-                            <input readonly="true" type="text" id="f-email" name="email" value="geo@email.com"/>
+                            <input readonly="true" type="text" id="f-email" name="email" value=<?php echo $email;?>>
                             <p id="email-txt" class="hidden"></p>
                         </div>
 
