@@ -16,7 +16,9 @@
 <br></br>
 
 <div class="container">
-
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Αρχική</a></li>
+</ol>
 <div class="row" id="main-first-row">
 
 <!-- 	<div class="col-md-offset-2  col-sm-offset-2"  >

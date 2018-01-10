@@ -18,6 +18,10 @@
 <div class="container">
     <div class="row">
         <h3>Εργοδότες</h3>
+ <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
+        <li class="breadcrumb-item active">Εργοδότες</li>
+        </ol>
     </div>
     <div class="row" id="workers-grid">
     	<!-- <div class="col-md-1   col-sm-1">
