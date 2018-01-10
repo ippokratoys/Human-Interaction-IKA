@@ -37,11 +37,11 @@
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
-        		  <img src="images/eisfores.jpg" alt="εισφορες"/>
+        		  <a href="upologismos_eisforon.php"><img src="images/eisfores.jpg" alt="εισφορες"/></a>
         		  <div class="card-body">
         		    <h4 class="card-title">Υπολογισμός oφειλομένων εισφορών</h4>
                     <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται τις εισφορές που χρωστάετε στον εργοδότη.</p>
-        		    <a href="#" class="btn btn-primary" >Υπολογισμός εισφορών</a>
+        		    <a href="upologismos_eisforon.php" class="btn btn-primary" >Υπολογισμός εισφορών</a>
         		  </div>
         		</div>
     		</div>
@@ -56,6 +56,7 @@
         		  </div>
         		</div>
     		</div>
+            
 		</div>
 	</div>
 </div>
