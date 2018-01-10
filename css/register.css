@@ -70,3 +70,7 @@ input::-webkit-input-placeholder {
 	font-size: 11px;
 	text-align: center;
 }
+
+#ensyma_calc .input-group{
+    width: 100%;
+}

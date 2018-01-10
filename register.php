@@ -129,6 +129,16 @@ function connectToDB($servername, $username, $password, $dbname)
 							</div>
 						</div>
 
+						<div class="form-group">
+							<label for="amka" class="cols-sm-2 control-label">AMKA</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-id-card-o" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="amka" id="amka"  placeholder="Εισάγεται το Α.Μ.Κ.Α σας"/>
+								</div>
+							</div>
+						</div>
+
 						<!-- <div class="form-group">
 							<label for="username" class="cols-sm-2 control-label">Ψευδώνυμο <small>(λατινικοί χαρακτήρες)</small></label>
 							<div class="cols-sm-10">
