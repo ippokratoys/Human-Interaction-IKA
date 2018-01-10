@@ -18,6 +18,10 @@
 <div class="container">
     <div class="row">
         <h3>Εργοδότες</h3>
+ <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
+        <li class="breadcrumb-item active">Εργοδότες</li>
+        </ol>
     </div>
     <div class="row" id="workers-grid">
     	<!-- <div class="col-md-1   col-sm-1">
@@ -37,11 +41,11 @@
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
-        		  <img src="images/eisfores.jpg" alt="εισφορες"/>
+        		  <a href="upologismos_eisforon.php"><img src="images/eisfores.jpg" alt="εισφορες"/></a>
         		  <div class="card-body">
         		    <h4 class="card-title">Υπολογισμός oφειλομένων εισφορών</h4>
                     <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται τις εισφορές που χρωστάετε στον εργοδότη.</p>
-        		    <a href="#" class="btn btn-primary" >Υπολογισμός εισφορών</a>
+        		    <a href="upologismos_eisforon.php" class="btn btn-primary" >Υπολογισμός εισφορών</a>
         		  </div>
         		</div>
     		</div>
@@ -56,6 +60,7 @@
         		  </div>
         		</div>
     		</div>
+            
 		</div>
 	</div>
 </div>

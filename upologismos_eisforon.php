@@ -9,12 +9,11 @@
 
 </head>
       <link rel="stylesheet" href="css/register.css">
-
 <body>
 
 
 
-    <div id="wrapper">
+    <div id="wrapper" >
 
 
         <!-- /#sidebar-wrapper -->
@@ -28,56 +27,39 @@
         <!-- /#page-content-wrapper -->
     <!-- /#wrapper -->
          <div class="container">
-          <h3>Υπολογισμός Ενσύμων</h3>
-        <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-        <li class="breadcrumb-item">Εργαζόμενοι</li>
-        <li class="breadcrumb-item active">Υπολογισμός Ενσύμων</li>
-
-        </ol>
             <div class="row main">
                 <div class="panel-heading">
-                   <!-- <div class="panel-title text-center">
+                   <div class="panel-title text-center">
                         <h1 class="title">ΙΚΑ ΥΠΟΛΟΓΙΣΜΟΣ ΕΝΣΥΜΩΝ</h1>
                         <hr />
-                    </div> -->
+                    </div>
                 </div>
                 <div class="main-login main-center">
                   <form class="form-horizontal" method="post" id="ensyma_calc">
 
                    <div class="form-group">
-                        <label for="amka" class="cols-sm-2 control-label">ΑΜΚΑ</label>
+                        <label for="num-upal" class="cols-sm-2 control-label">Αριθμός υπαλλήλων παλαιών υπάλληλων (ανω τον 25>=)</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input required="true" type="number" class="form-control" name="amka" id="amka"  placeholder="Εισάγεται AMKA"/>
+                                <input required="true" type="number" class="form-control" name="num-upal" id="num-upal"  placeholder="Εισάγεται αριθμό υπαλλήλων"/>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="afm" class="cols-sm-2 control-label">ΑΦΜ</label>
+                        <label for="avg-misth" class="cols-sm-2 control-label">Μέσος μηνιαίος μισθός(μικτός)</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input required="true" type="number" class="form-control" name="ΑΦΜ" id="afm"  placeholder="Εισάγεται ΑΦΜ"/>
+                                <input required="true" type="number" class="form-control" name="avg-misth" id="avg-misth"  placeholder="Εισάγεται μέσο μισθό"/>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="tautotita" class="cols-sm-2 control-label">Αριθμός Ταυτότητας</label>
+                        <label for="neoi" class="cols-sm-2 control-label">Πλήθος νέων εργαζόμενων <small>(κάτω τον 25)</small> </label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-
-                                <input required="true" type="text" class="form-control" name="tautotita" id="tautotita"  placeholder="Αριθμός Ταυτότητας"/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="etoi" class="cols-sm-2 control-label">Πλήθος των ετών εργασίας </label>
-                        <div class="cols-sm-10">
-                            <div class="input-group">
-                                <input required="true" type="text" class="form-control" name="etoi" id="etoi"  placeholder="Εισάγεται τον χρόνια υπηρεσίας σας"/>
+                                <input required="true" type="text" class="form-control" name="neoi" id="neoi"  placeholder="Εισάγεται αριθμό"/>
                             </div>
                         </div>
                     </div>
@@ -93,7 +75,7 @@
             </div>
         </div>
 
-        <div id="ensimaModal" class="modal fade" role="dialog">
+        <div id="eisforesModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -103,7 +85,7 @@
                 <h4 class="modal-title">Πλήθος ενσήμων</h4>
               </div>
               <div class="modal-body">
-                <p> Τα ένσημα του εργαζομένου με ΑΦΜ <span id="afm-modal"></span>, είναι <span id="theNumber-modal"></span></p>
+                <p> Οι εκτιμώμενες εισφορές είναι <span id="theNumber-modal"></span> €</p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -113,7 +95,7 @@
           </div>
         </div>
 
-        <script src="js/ensima.js"></script>
+        <script src="js/eisfores.js"></script>
 </body>
 
 </html>

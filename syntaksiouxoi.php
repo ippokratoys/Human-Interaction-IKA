@@ -18,7 +18,12 @@
 <div class="container">
     <div class="row">
         <h3>Συνταξιούχοι</h3>
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
+        <li class="breadcrumb-item active">Συνταξιούχοι</li>
+        </ol>
     </div>
+   
     <div class="row" id="workers-grid">
     	<!-- <div class="col-md-1   col-sm-1">
     	</div> -->

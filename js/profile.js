@@ -23,6 +23,7 @@ $(document).ready(function(){
             var input = $(this); // This is the jquery object of the input, do what you will
             var name = input.attr("name");
             input.removeClass("hidden");
+            $("#change-info").removeClass("hidden");
             $("#"+name+"-txt").addClass("hidden");
         });
 
