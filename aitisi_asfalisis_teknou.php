@@ -129,6 +129,8 @@
               </div>
               <div class="modal-body">
                 <p>Ειστέ σίγουροι ότι τα στοιχεία είναι σωστά?</p>
+                <span id="stoixeia">
+                </span>
               </div>
               <div class="modal-footer">
                 <button type="button" class="left btn btn-danger" data-dismiss="modal">Ακύρωση</button>
