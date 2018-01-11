@@ -41,22 +41,22 @@
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
-        		  <img src="images/calculator.jpg" alt="Card image cap"/>
+        		  <a href="bebaiosh_ergasias.php"> <img src="images/bebaiosh_ergasias.jpg" alt="Card image cap"/> </a>
         		  <div class="card-body">
-        		    <h4 class="card-title">Υπολογισμός Σύνταξης</h4>
-                    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται πόσα ένσημα έχεται</p>
-        		    <a href="#" class="btn btn-primary" >Υπολογισμός χρόνων για σύνταξη</a>
+        		    <h4 class="card-title">Βεβαίωση εργασίας</h4>
+                    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να εκτυπώσετε μια βεβαίωση στην οποία να φαίνεται αν εργάζεσται και σε ποιά εταιρία.</p>
+        		    <a href="bebaiosh_ergasias.php" class="btn btn-primary" >Βεβαίωση εργασίας</a>
         		  </div>
         		</div>
     		</div>
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
-        		  <img src="images/upeuthini_dilosi.png" alt="Card image cap"/>
+        		  <a href="aitisi_asfalisis_teknou.php"><img src="images/upeuthini_dilosi.png" alt="Card image cap"/></a>
         		  <div class="card-body">
-        		    <h4 class="card-title">Αιτηση Συνταξιοδότησης</h4>
-                    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να κάνεται αίτηση συνταξιοδότησης ηλεκτρονικά <small>(απαιτεί λογαριασμό)</small>. Μπορείται να παρακουληθήσεται την πορεία της αίτησης σας κάνοντας σύνδαιση τον λογαριασμό σας.</p>
-        		    <a href="#" class="btn btn-primary" >Υπολογισμός χρόνων για σύνταξη</a>
+        		    <h4 class="card-title">Αιτηση Ασφάλισης Τέκνου</h4>
+                    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να κάνεται αίτηση για να ασφαλίσεται κάποιο απο τα τέκνα σας <small>(απαιτεί λογαριασμό)</small>. Μπορείται να παρακουληθήσεται την πορεία της αίτησης σας κάνοντας σύνδεση τον λογαριασμό σας.</p>
+        		    <a href="aitisi_asfalisis_teknou.php" class="btn btn-primary" >Αιτηση Ασφάλισης Τέκνου</a>
         		  </div>
         		</div>
     		</div>

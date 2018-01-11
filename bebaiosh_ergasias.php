@@ -6,7 +6,6 @@
     include("refs.html");
   ?>
   <!-- Custom styles for this template -->
-
 </head>
       <link rel="stylesheet" href="css/register.css">
 
@@ -32,7 +31,7 @@
         <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
         <li class="breadcrumb-item">Εργαζόμενοι</li>
-        <li class="breadcrumb-item active">Υπολογισμός Ενσύμων</li>
+        <li class="breadcrumb-item active">Βεβαίωση Εργασίας</li>
 
         </ol>
             <div class="row main">
@@ -43,7 +42,7 @@
                     </div> -->
                 </div>
                 <div class="main-login main-center">
-                  <form class="form-horizontal" action="bebaiosh_ergasias_page.php" method="post" id="bebaiosh_ergasias">
+                  <form target="_blank" class="form-horizontal" action="bebaiosh_ergasias_page.php" method="post" id="bebaiosh_ergasias">
 
                    <div class="form-group">
                         <label for="amka" class="cols-sm-2 control-label">ΑΜΚΑ</label>
