@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="el">
     <head>
@@ -62,6 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	  	$result = mysqli_query($conn, $sql);
 
 	  	if ($result) {
+	  		$_SESSION["useremail"] = $email;
 	  		echo '<script type="text/javascript">
 	  			window.location = "index.php"
 	  			</script>';
