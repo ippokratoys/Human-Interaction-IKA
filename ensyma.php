@@ -74,7 +74,7 @@ function connectToDB($servername, $username, $password, $dbname)
           <h3>Υπολογισμός Ενσύμων</h3>
         <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-        <li class="breadcrumb-item">Εργαζόμενοι</li>
+        <li class="breadcrumb-item"><a href="ergazomenoi.php">Εργαζόμενοι</a></li>
         <li class="breadcrumb-item active">Υπολογισμός Ενσύμων</li>
 
         </ol>

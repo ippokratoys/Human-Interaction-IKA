@@ -31,10 +31,11 @@ session_start();
         <div class="container">
           <h3>Αίτηση Ασφάλισης Τέκνου</h3>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-            <li class="breadcrumb-item">Εργαζόμενοι</li>
-            <li class="breadcrumb-item active">Αίτηση Ασφάλισης Τέκνου</li>
-          </ol>
+        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
+        <li class="breadcrumb-item"><a href="ergazomenoi.php">Εργαζόμενοι</a></li>
+        <li class="breadcrumb-item active">Αίτηση Ασφάλισης Τέκνου</li>
+
+        </ol>
             <div class="row main">
                 <div class="panel-heading">
                    <!-- <div class="panel-title text-center">
