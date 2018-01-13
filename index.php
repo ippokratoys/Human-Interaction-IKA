@@ -65,10 +65,10 @@ session_start();
 <div class="row" id="second-row">
 	<div class="col-lg-6 col-md-6  col-sm-6" >
     	<div class="card" >
-    	  <a href="syntaksiouxoi.php"><img class="card-img-top" src="images/disable.jpg" alt="Card image cap" style="width: 100%; heigit:100%;       object-fit: cover;max-height: 300px;"></a>
+    	  <a href="#"><img class="card-img-top" src="images/disable.jpg" alt="Card image cap" style="width: 100%; heigit:100%;       object-fit: cover;max-height: 300px;"></a>
     	  <div class="card-body">
 
-    	    <a href="syntaksiouxoi.php" class="btn btn-primary" style="width: 100%;"><h4>Άτομα με ειδικές ανάγκες</h4></a>
+    	    <a href="#" class="btn btn-primary" style="width: 100%;"><h4>Άτομα με ειδικές ανάγκες</h4></a>
     	  </div>
     	</div>
 	</div>

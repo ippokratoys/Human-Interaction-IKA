@@ -47,9 +47,9 @@ session_start();
         		<div class="card">
         		  <a href="aitisi_suntaksiodotikou_boithimatos.php" ><img src="images/calculator.jpg" alt="Card image cap"></a>
         		  <div class="card-body">
-        		    <h4 class="card-title">Αίτιση καταβολής συνταξιοδοτικού βοηθήματος</h4>
-                    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να αιτηθείτε για την καταβολή συνταξιοδοτικού βοηθήματος <small> απαιτεί σύνδεση</small>.Μπορειται να παρακολουθήται την πορεία της αίτησης σας απο το προφίλ σας</p>
-        		    <a href="aitisi_suntaksiodotikou_boithimatos.php" class="btn btn-primary" >Αίτιση συνταξιοδοτικού βοηθήματος</a>
+        		    <h4 class="card-title">Αίτηση Καταβολής Συνταξιοδωτικού Βοηθήματος</h4>
+                    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να αιτηθείτε για την καταβολή συνταξιοδοτικού βοηθήματος <small> απαιτεί σύνδεση</small>.Μπορειται να παρακολουθείτε την πορεία της αίτησης σας απο το προφίλ σας</p>
+        		    <a href="aitisi_suntaksiodotikou_boithimatos.php" class="btn btn-primary" >Αίτηση Καταβολής Συνταξιοδωτικού Βοηθήματος</a>
         		  </div>
         		</div>
     		</div>
@@ -60,7 +60,7 @@ session_start();
         		  <div class="card-body">
         		    <h4 class="card-title">Υπολογισμός δώρου εορτών</h4>
                     <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται το δώρο εορτών που δικαιούστε.</p>
-        		    <a href="upologismos_dwrou.php" class="btn btn-primary" >Υπολογισμός δώρου</a>
+        		    <a href="upologismos_dwrou.php" class="btn btn-primary" >Υπολογισμός Δώρου Συντάξεως</a>
         		  </div>
         		</div>
     		</div>

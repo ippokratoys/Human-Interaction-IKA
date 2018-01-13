@@ -29,12 +29,13 @@ session_start();
         <!-- /#page-content-wrapper -->
     <!-- /#wrapper -->
         <div class="container">
-          <h3>Αίτηση καταβολής συνταξιοδωτικού βοηθήματος</h3>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-            <li class="breadcrumb-item">Συνταξιούχοι</li>
-            <li class="breadcrumb-item active">Αίτηση καταβολής συνταξιοδωτικού βοηθήματος</li>
-          </ol>
+          <h3>Αίτηση Καταβολής Συνταξιοδωτικού Βοηθήματος</h3>
+           <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
+        <li class="breadcrumb-item"><a href="syntaksiouxoi.php">Συνταξιούχοι</a></li>
+        <li class="breadcrumb-item active">Αίτηση Καταβολής Συνταξιοδωτικού Βοηθήματος</li>
+
+        </ol>
             <div class="row main">
                 <div class="panel-heading">
                    <!-- <div class="panel-title text-center">

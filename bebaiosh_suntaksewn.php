@@ -33,7 +33,7 @@ session_start();
           <h3>Βεβαίωση Συντάξεως</h3>
         <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
-        <li class="breadcrumb-item">Συνταξιούχοι</li>
+        <li class="breadcrumb-item"><a href="syntaksiouxoi.php">Συνταξιούχοι</a></li>
         <li class="breadcrumb-item active">Βεβαίωση Συντάξεως</li>
 
         </ol>
