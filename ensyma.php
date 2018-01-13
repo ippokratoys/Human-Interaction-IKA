@@ -31,11 +31,11 @@ session_start();
         <!-- /#page-content-wrapper -->
     <!-- /#wrapper -->
          <div class="container">
-          <h3>Υπολογισμός Ενσύμων</h3>
+          <h3>Υπολογισμός Ενσήμων</h3>
         <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.php">Αρχική</a></li>
         <li class="breadcrumb-item"><a href="ergazomenoi.php">Εργαζόμενοι</a></li>
-        <li class="breadcrumb-item active">Υπολογισμός Ενσύμων</li>
+        <li class="breadcrumb-item active">Υπολογισμός Ενσήμων</li>
 
         </ol>
             <div class="row main">
