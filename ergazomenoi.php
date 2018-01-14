@@ -36,7 +36,7 @@ session_start();
         		  <a href="ensyma.php"><img src="images/enshma.jpg" alt="Card image cap"/></a>
         		  <div class="card-body">
         		    <h4 class="card-title">Υπολογισμός ενσήμων</h4>
-        		    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται πόσα ένσημα έχεται</p><br><br><br><br>
+        		    <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να υπολογίσεται πόσα ένσημα έχεται</p>
         		    <a href="ensyma.php" class="btn btn-primary" >Υπολογισμός  ενσήμων</a>
         		  </div>
         		</div>
@@ -48,7 +48,6 @@ session_start();
         		  <div class="card-body">
         		    <h4 class="card-title">Βεβαίωση εργασίας</h4>
                     <p class="card-text">Μέσω της εφαρμογής αυτής μπορείται να εκτυπώσετε μια βεβαίωση στην οποία να φαίνεται αν εργάζεσται και σε ποιά εταιρία.</p>
-                    <br><br><br>
         		    <a href="bebaiosh_ergasias.php" class="btn btn-primary" >Βεβαίωση εργασίας</a>
         		  </div>
         		</div>
