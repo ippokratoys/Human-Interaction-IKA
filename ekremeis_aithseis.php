@@ -124,6 +124,7 @@ session_start();
 
     <!-- Menu Toggle Script -->
     <script src="js/profile.js"></script>
+    
 
 </body>
 

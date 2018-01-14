@@ -220,7 +220,11 @@ function connectToDB($servername, $username, $password, $dbname)
           </div>
         </div>
 
+
         <script src="js/aitisi.js"></script>
+<?php
+  include("footer.html");
+?>
 </body>
 
 </html>

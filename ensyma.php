@@ -168,6 +168,9 @@ function connectToDB($servername, $username, $password, $dbname)
         </div>
 
         <script src="js/ensima.js"></script>
+<?php
+  include("footer.html");
+?>
 </body>
 
 </html>

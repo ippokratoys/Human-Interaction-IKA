@@ -150,6 +150,9 @@ function connectToDB($servername, $username, $password, $dbname)
         </div>
 
         <script src="js/eisfores.js"></script>
+<?php
+  include("footer.html");
+?>
 </body>
 
 </html>

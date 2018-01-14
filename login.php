@@ -89,7 +89,7 @@ function connectToDB($servername, $username, $password, $dbname)
 			<div class="row main">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
-	               		<h1 class="title">ΙΚΑ</h1>
+	               		<h1 class="title">Είσοδος</h1>
 	               		<hr />
 	               	</div>
 	            </div>
@@ -131,4 +131,7 @@ function connectToDB($servername, $username, $password, $dbname)
 		</div>
 
 	</body>
+<?php
+	include("footer.html");
+?>
 </html>

@@ -186,6 +186,9 @@ function connectToDB($servername, $username, $password, $dbname)
 
         <!-- <script src="js/ensima.js"></script> -->
         <script src="js/bebaiosh_ergasias.js"></script>
+<?php
+  include("footer.html");
+?>
 </body>
 
 </html>

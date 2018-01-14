@@ -100,6 +100,9 @@ session_start();
         </div>
 
         <script src="js/eisfores.js"></script>
+<?php
+  include("footer.html");
+?>
 </body>
 
 </html>
