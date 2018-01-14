@@ -1,5 +1,79 @@
 <?php
 session_start();
+if(empty($_SESSION["useremail"])){
+  echo '<script type="text/javascript">
+        window.location = "login.php"
+        </script>';
+}else{
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $amka = test_input($_POST["amka"]);
+      $afm = test_input($_POST["afm"]);
+
+      $conn = connectToDB("localhost", "root", "", "eamDatabase");
+      mysqli_set_charset($conn, 'utf8');
+
+      $sql = "UPDATE user SET amka='".$amka."', afm='".$afm."' WHERE email='".$_SESSION["useremail"]."'";
+      $result = mysqli_query($conn, $sql);
+      if ($result and empty($_SESSION["errorMsg"])) {
+        mysqli_close($conn);
+        echo '<script type="text/javascript">
+            window.location = "bebaiosh_syntakseos_page.php"
+            </script>';
+        }
+        mysqli_close($conn);
+    }else{
+      $conn = connectToDB("localhost", "root", "", "eamDatabase");
+      mysqli_set_charset($conn, 'utf8');
+
+      //$errorMsg = "";
+      $_SESSION["errorMsg"] = "";
+
+      $sql = "SELECT email, name, surname, amka, afm FROM user WHERE email='".$_SESSION["useremail"]."'";
+      $result = mysqli_query($conn, $sql);
+
+      if (mysqli_num_rows($result) > 0) {
+          $row = mysqli_fetch_assoc($result);
+          $email = $row["email"];
+          $name = $row["name"];
+          $surname = $row["surname"];
+          $amka = $row["amka"];
+          $afm = $row["afm"];
+      }else{
+          $email = "";
+          $name = "";
+          $surname = "";
+          $amka = "";
+          $afm = "";
+      }
+      $sql = "SELECT email FROM retiredInfo WHERE email='".$_SESSION["useremail"]."'";
+      $result = mysqli_query($conn, $sql);
+
+      if (!(mysqli_num_rows($result) > 0)) {
+          $errorMsg = "Πρέπει να είστε δηλωμένος ως συνταξιούχος πρώτα.";
+            $_SESSION["errorMsg"] = "Πρέπει να είστε δηλωμένος ως συνταξιούχος πρώτα.";
+        }
+      mysqli_close($conn);
+    }
+}
+
+function connectToDB($servername, $username, $password, $dbname)
+  {
+      // Create connection
+      $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+      // Check connection
+      if (!$conn) {
+          die("Connection to database failed: " . mysqli_connect_error());
+      }
+      //echo "Connected successfully";
+      return $conn;
+  }
+  function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,9 +82,13 @@ session_start();
   <?php
     include("refs.html");
   ?>
+  <style>
+        .error {color: #FF0000;}
+        </style>
   <!-- Custom styles for this template -->
 </head>
       <link rel="stylesheet" href="css/register.css">
+      <title>Βεβαίωση Συντάξεων - ΙΚΑ</title>
 
 <body>
 
@@ -45,13 +123,18 @@ session_start();
                     </div> -->
                 </div>
                 <div class="main-login main-center">
-                  <form target="_blank" class="form-horizontal" action="bebaiosh_syntakseos_page.php" method="post" id="bebaiosh_ergasias">
+                  <form target="_blank" class="form-horizontal" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="bebaiosh_ergasias">
 
                    <div class="form-group">
                         <label for="amka" class="cols-sm-2 control-label">ΑΜΚΑ</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input required="true" type="number" class="form-control" name="amka" id="amka"  placeholder="Εισάγεται AMKA"/>
+                                <input required="true" type="number" class="form-control" name="amka" id="amka"  <?php 
+                                if (empty($amka)){
+                                  echo 'placeholder="Εισάγετε ΑMKA"';
+                                }else{
+                                  echo 'value="'.$amka.'"';
+                                } ?>/>
                             </div>
                         </div>
                     </div>
@@ -60,7 +143,12 @@ session_start();
                         <label for="afm" class="cols-sm-2 control-label">ΑΦΜ</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input required="true" type="number" class="form-control" name="ΑΦΜ" id="afm"  placeholder="Εισάγεται ΑΦΜ"/>
+                                <input required="true" type="number" class="form-control" name="afm" id="afm"  <?php 
+                                if (empty($afm)){
+                                  echo 'placeholder="Εισάγετε ΑΦΜ"';
+                                }else{
+                                  echo 'value="'.$afm.'"';
+                                } ?>/>
                             </div>
                         </div>
                     </div>
@@ -84,6 +172,7 @@ session_start();
                         </div>
                     </div>
 
+                     <span class="error"><?php echo $_SESSION["errorMsg"];?></span>
 
                         <div class="form-group ">
                             <!-- <button id="login-button" type="button" class="btn btn-primary btn-lg btn-block login-button">Σύνδεση</button> -->

@@ -4,6 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="el">
     <head>
+        <title>Εγγραφή - ΙΚΑ</title>
     	<meta charset=UTF-8>
     	<?php
     		include("refs.html");
@@ -66,6 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	  	if ($result) {
 	  		$_SESSION["useremail"] = $email;
+	  		mysqli_close($conn);
 	  		echo '<script type="text/javascript">
 	  			window.location = "index.php"
 	  			</script>';

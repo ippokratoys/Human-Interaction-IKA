@@ -1,5 +1,72 @@
 <?php
 session_start();
+if(empty($_SESSION["useremail"])){
+  echo '<script type="text/javascript">
+        window.location = "login.php"
+        </script>';
+}else{
+    $errorMsg = "";
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $amka = test_input($_POST["amka"]);
+      $afm = test_input($_POST["afm"]);
+
+      $conn = connectToDB("localhost", "root", "", "eamDatabase");
+      mysqli_set_charset($conn, 'utf8');
+
+      $sql = "UPDATE user SET amka='".$amka."', afm='".$afm."' WHERE email='".$_SESSION["useremail"]."'";
+      $result1 = mysqli_query($conn, $sql);
+      $currDate = date("Y-m-d");
+      $sql = "INSERT INTO Applications (status, date, user, applicationType, applicationDone) VALUES ('pending', '".$currDate."', '".$_SESSION["useremail"]."', 'child insurance', 'No')";
+      $result2 = mysqli_query($conn, $sql);
+      if ($result1 and $result2) {
+        mysqli_close($conn);
+        $errorMsg = "Η αίτηση κατατέθηκε επιτυχώς.";
+        }else{
+            $errorMsg = "Η αίτηση δεν κατατέθηκε επιτυχώς.";
+        }
+        mysqli_close($conn);
+    }
+  $conn = connectToDB("localhost", "root", "", "eamDatabase");
+  mysqli_set_charset($conn, 'utf8');
+
+  $sql = "SELECT email, name, surname, amka, afm FROM user WHERE email='".$_SESSION["useremail"]."'";
+  $result = mysqli_query($conn, $sql);
+
+  if (mysqli_num_rows($result) > 0) {
+      $row = mysqli_fetch_assoc($result);
+      $email = $row["email"];
+      $name = $row["name"];
+      $surname = $row["surname"];
+      $amka = $row["amka"];
+      $afm = $row["afm"];
+  }else{
+      $email = "";
+      $name = "";
+      $surname = "";
+      $amka = "";
+      $afm = "";
+  }
+  mysqli_close($conn);
+}
+
+function connectToDB($servername, $username, $password, $dbname)
+  {
+      // Create connection
+      $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+      // Check connection
+      if (!$conn) {
+          die("Connection to database failed: " . mysqli_connect_error());
+      }
+      //echo "Connected successfully";
+      return $conn;
+  }
+  function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +75,10 @@ session_start();
   <?php
     include("refs.html");
   ?>
+    <style>
+        .error {color: #FF0000;}
+        </style>
+  <title>Αίτηση Ασφάλισης Τέκνου - ΙΚΑ</title>
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="css/register.css">
 </head>
@@ -44,13 +115,18 @@ session_start();
                     </div> -->
                 </div>
                 <div class="main-login main-center">
-                  <form class="form-horizontal" target="aitisi_asf_done.php" method="post" id="aitisi_teknou">
+                  <form class="form-horizontal" target="aitisi_asf_done.php" method="post" id="aitisi_teknou" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
                    <div class="form-group">
                         <label for="amka" class="cols-sm-2 control-label">ΑΜΚΑ</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input required="true" type="number" class="form-control" name="amka" id="amka"  placeholder="Εισάγεται AMKA"/>
+                                <input required="true" type="number" class="form-control" name="amka" id="amka"  <?php 
+                                if (empty($amka)){
+                                  echo 'placeholder="Εισάγετε ΑMKA"';
+                                }else{
+                                  echo 'value="'.$amka.'"';
+                                } ?>/>
                             </div>
                         </div>
                     </div>
@@ -59,7 +135,12 @@ session_start();
                         <label for="afm" class="cols-sm-2 control-label">ΑΦΜ</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input required="true" type="number" class="form-control" name="ΑΦΜ" id="afm"  placeholder="Εισάγεται ΑΦΜ"/>
+                                <input required="true" type="number" class="form-control" name="afm" id="afm"  <?php 
+                                if (empty($afm)){
+                                  echo 'placeholder="Εισάγετε ΑΦΜ"';
+                                }else{
+                                  echo 'value="'.$afm.'"';
+                                } ?>/>
                             </div>
                         </div>
                     </div>
@@ -117,6 +198,8 @@ session_start();
                             <input id="fake-btn" type="submit" value="Υποβολή αίτησης" class="btn btn-primary btn-lg btn-block login-button"></input>
                             <!-- <button class="btn btn-primary btn-lg btn-block login-button" data-toggle="modal" data-target="#myModal" value="" >Υποβολή αίτησης </button> -->
                         </div>
+
+                        <span class="error"><?php echo $errorMsg;?></span>
 
                     </form>
                 </div>
