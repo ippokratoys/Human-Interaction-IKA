@@ -88,6 +88,7 @@ function connectToDB($servername, $username, $password, $dbname)
   <!-- Custom styles for this template -->
 </head>
       <link rel="stylesheet" href="css/register.css">
+      <title>Βεβαίωση Συντάξεων - ΙΚΑ</title>
 
 <body>
 

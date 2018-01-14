@@ -5,6 +5,7 @@ session_start();
 
 <html>
     <head>
+        <title>Εργοδότες - ΙΚΑ</title>
     	<?php
     		include("refs.html")
     	?>
@@ -63,7 +64,7 @@ session_start();
         		  </div>
         		</div>
     		</div>
-            
+
 		</div>
 	</div>
 </div>

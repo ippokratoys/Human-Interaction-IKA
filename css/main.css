@@ -14,11 +14,6 @@ body, html{
     width: 100%;
 }
 
-#workers-grid .btn-primary{
-    width: 100%;
-    margin-top: 10px;
-}
-
 #workers-grid .card-tile{
     font-weight: bold;
     /*background-color: gray;*/
@@ -130,5 +125,28 @@ body, html{
 .text-welcome{
     margin-top: 35px;
     background-color: lightgray;
-    padding: 20px;
+    /*padding: 20px;*/
+}
+
+.navbar-default{
+    display: block;
+}
+
+#workers-grid .card{
+    height: 400px;
+}
+
+#workers-grid .btn-primary{
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    /*margin-top: 10px;*/
+}
+
+#bs-example-navbar-collapse-1 a{
+    padding-top: 25px;
+}
+
+.navbar-form{
+    padding-top: 10px;
 }

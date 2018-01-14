@@ -3,6 +3,7 @@ session_start();
 ?>
 <html>
     <head>
+        <title>Σύνδεση - ΙΚΑ</title>
     	<?php
     		include("refs.html");
     	?>
@@ -29,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $email = test_input($_POST["email"]);
   }
-  
+
   if (empty($_POST["password"])) {
     $errorMsg = "Μη έγκυρος συνδυασμός κωδικού - email.";
   } else {

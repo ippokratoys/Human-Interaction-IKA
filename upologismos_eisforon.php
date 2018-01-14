@@ -5,6 +5,7 @@ session_start();
 <html lang="en">
 
 <head>
+    <title>Υπολογισμός Εισφορών - ΙΚΑ</title>
   <?php
     include("refs.html");
   ?>

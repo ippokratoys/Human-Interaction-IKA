@@ -5,6 +5,7 @@ session_start();
 
 <html>
     <head>
+        <title>Συνταξιούχοι - ΙΚΑ</title>
     	<?php
     		include("refs.html")
     	?>
@@ -30,7 +31,7 @@ session_start();
     <div class="row" id="workers-grid">
     	<!-- <div class="col-md-1   col-sm-1">
     	</div> -->
-        <div class="" >
+        <!-- <div class="" > -->
 
             <div class="col-md-4  col-sm-4" >
         		<div class="card">
@@ -65,7 +66,7 @@ session_start();
         		</div>
     		</div>
 
-		</div>
+		<!-- </div> -->
 	</div>
 </div>
 

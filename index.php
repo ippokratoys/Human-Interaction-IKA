@@ -5,6 +5,7 @@ session_start();
 
 <html>
     <head>
+        <title>ΙΚΑ</title>
     	<?php
     		include("refs.html")
     	?>

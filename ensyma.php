@@ -52,6 +52,7 @@ function connectToDB($servername, $username, $password, $dbname)
 
 </head>
       <link rel="stylesheet" href="css/register.css">
+      <title>Ενσημα - ΙΚΑ</title>
 
 <body>
 

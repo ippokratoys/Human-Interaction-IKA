@@ -82,6 +82,7 @@ function connectToDB($servername, $username, $password, $dbname)
    <style>
         .error {color: #FF0000;}
         </style>
+  <title>Βεβαίωση Εργασίας - ΙΚΑ</title>
   <!-- Custom styles for this template -->
 </head>
       <link rel="stylesheet" href="css/register.css">
