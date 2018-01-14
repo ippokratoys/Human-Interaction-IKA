@@ -59,64 +59,7 @@ session_start();
 </div>
 
 <br></br>
-<div class="row">
-    <div class="col-md-2   col-sm-2"></div>
-    <div class="col-md-2   col-sm-2">
 
-        <div class="card" >
-          <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap" style="width: 10rem; height: 10rem;">
-          <div class="card-block">
-            <h4 class="card-title">Anakoinwseis</h4>
-
-            <p class="card-text">.......................</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-
-
-          </div>
-        </div>
-    </div>
-    <div class="col-md-2   col-sm-2">
-
-        <div class="card" >
-          <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap" style="width: 10rem; height: 10rem;">
-          <div class="card-block">
-            <h4 class="card-title">Nomosxedia</h4>
-
-            <p class="card-text">.......................</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-
-          </div>
-        </div>
-    </div>
-
-    <div class="col-md-2   col-sm-2">
-
-        <div class="card" >
-          <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap" style="width: 10rem; height: 10rem;">
-          <div class="card-block">
-            <h4 class="card-title">Xrhsimes plhrofories</h4>
-
-            <p class="card-text">.......................</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-
-
-          </div>
-        </div>
-    </div>
-    <div class="col-md-2   col-sm-2">
-
-        <div class="card" >
-          <img class="card-img-top" src="images/funnydog.jpg" alt="Card image cap" style="width: 10rem; height: 10rem;">
-          <div class="card-block">
-            <h4 class="card-title">Alles yphresies</h4>
-
-            <p class="card-text">.......................</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-
-          </div>
-        </div>
-    </div>
-</div>
       <br></br>
 </div>
 
