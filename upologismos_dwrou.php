@@ -1,5 +1,43 @@
 <?php
 session_start();
+if(empty($_SESSION["useremail"])){
+  echo '<script type="text/javascript">
+        window.location = "login.php"
+        </script>';
+}else{
+      $errorMsg = "";
+      $conn = connectToDB("localhost", "root", "", "eamDatabase");
+      mysqli_set_charset($conn, 'utf8');
+
+      $sql = "SELECT user.email, name, surname, amka, afm, retiredInfo.suntaksi FROM user, retiredInfo WHERE user.email='".$_SESSION["useremail"]."' AND retiredInfo.email=user.email";
+      $result = mysqli_query($conn, $sql);
+
+      if (mysqli_num_rows($result) > 0) {
+          $row = mysqli_fetch_assoc($result);
+          $avgmisth = $row["suntaksi"];
+      }else{
+        $suntaksi = "";
+      }
+      $sql = "SELECT email FROM retiredInfo WHERE email='".$_SESSION["useremail"]."'";
+      $result = mysqli_query($conn, $sql);
+      if (!(mysqli_num_rows($result) > 0)) {
+          $errorMsg = "Πρέπει να είστε δηλωμένος ως συνταξιούχος προκειμένου να μπορεί να υπολογιστεί το δώρο σας σωστά.";
+      }
+      mysqli_close($conn);
+}
+
+function connectToDB($servername, $username, $password, $dbname)
+  {
+      // Create connection
+      $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+      // Check connection
+      if (!$conn) {
+          die("Connection to database failed: " . mysqli_connect_error());
+      }
+      //echo "Connected successfully";
+      return $conn;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +47,9 @@ session_start();
   <?php
     include("refs.html");
   ?>
+    <style>
+        .error {color: #FF0000;}
+        </style>
   <!-- Custom styles for this template -->
 
 </head>
@@ -56,19 +97,26 @@ session_start();
                         <label for="avg-misth" class="cols-sm-2 control-label">Ποσό μηνιαίας σύνταξης</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
-                                <input required="true" type="number" class="form-control" name="avg-misth" id="avg-misth"  placeholder="Εισάγεται το ποσό"/>
+                                <input required="true" type="number" class="form-control" name="avg-misth" id="avg-misth"  <?php 
+                                if (empty($avgmisth)){
+                                  echo 'placeholder="Εισάγεται το ποσό"';
+                                }else{
+                                  echo 'value="'.$avgmisth.'"';
+                                } ?>/>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="anapiria" class="cols-sm-2 control-label">Ποσοστό αναπηρίας %<small>(αν δεν υπάρχει κενό)</small> </label>
+                        <label for="anapiria" class="cols-sm-2 control-label">Ποσοστό αναπηρίας %<small>(αν δεν υπάρχει βάλτε 0)</small> </label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <input required="true" type="number" min="0" max="100" class="form-control" name="anapiria" id="anapiria"  placeholder="0 - 100"/>
                             </div>
                         </div>
                     </div>
+
+                    <span class="error"><?php echo $errorMsg;?></span>
 
 
                         <div class="form-group ">
