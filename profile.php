@@ -100,13 +100,13 @@ if(empty($_SESSION["useremail"])){
                     </a>
                 </li>
                 <li>
-                    <a href="#">Τα στοιχεία μου</a>
+                    <a href="profile.php">Τα στοιχεία μου</a>
                 </li>
                 <li>
                     <a href="#">Οι εφαρμογές μου</a>
                 </li>
                 <li>
-                    <a href="#">Εκρεμείς αιτήσεις</a>
+                    <a href="ekremeis_aithseis.php">Εκρεμείς αιτήσεις</a>
                 </li>
             </ul>
         </div>
