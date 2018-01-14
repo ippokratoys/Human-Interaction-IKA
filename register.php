@@ -66,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	  	if ($result) {
 	  		$_SESSION["useremail"] = $email;
+	  		mysqli_close($conn);
 	  		echo '<script type="text/javascript">
 	  			window.location = "index.php"
 	  			</script>';

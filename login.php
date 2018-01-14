@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   		$row = mysqli_fetch_assoc($result);
   		if ($password == $row["password"]) {
   			$_SESSION["useremail"] = $email;
+  			mysqli_close($conn);
   			echo '<script type="text/javascript">
   			window.location = "index.php"
   			</script>';
