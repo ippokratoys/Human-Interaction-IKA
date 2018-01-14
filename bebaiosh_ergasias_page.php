@@ -51,7 +51,7 @@ function connectToDB($servername, $username, $password, $dbname)
     <head>
       <!-- Custom styles for this template -->
       <link rel="stylesheet" href="css/bebaiosh.css">
-      <title>Βεβαίωση Εγασίας - ΙΚΑ</title>
+      <title>Βεβαίωση Εργασίας - ΙΚΑ</title>
     </head>
 
     <h1>Ικα</h1>

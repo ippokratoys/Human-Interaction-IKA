@@ -75,6 +75,9 @@ function connectToDB($servername, $username, $password, $dbname)
   <?php
     include("refs.html");
   ?>
+    <style>
+        .error {color: #FF0000;}
+        </style>
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="css/register.css">
 </head>
@@ -195,7 +198,7 @@ function connectToDB($servername, $username, $password, $dbname)
                             <!-- <button class="btn btn-primary btn-lg btn-block login-button" data-toggle="modal" data-target="#myModal" value="" >Υποβολή αίτησης </button> -->
                         </div>
 
-                        <?php echo $errorMsg; ?>
+                        <span class="error"><?php echo $errorMsg;?></span>
 
                     </form>
                 </div>
