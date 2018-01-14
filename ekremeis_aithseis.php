@@ -84,46 +84,37 @@ session_start();
           ?>
 
             <div id="main-cont" class="container-fluid">
-                <h1>Τα στοιχεία μου</h1>
-                <div class="hidden" id="change-info">
-                    <p>Επεξεργαστείτε τα στοιχεία που σας ενδιαφέρου και πατήστε υποβολή.</p>
-                    <small> Δεν μπορείται να αλλάξετε το email σας.</small>
-                </div>
-                <form id="my-infos">
-                    <div class="row">
-                        <div class="well col-sm-3">
-                            <label for="f-name" >Όνομα</label>
-                            <input type="text" id="f-name" name="name" value=<?php echo $name;?>>
-                            <p id="name-txt" class="hidden"></p>
-                        <!-- </div> -->
-
-                        <!-- <div class="well"> -->
-                            <label for="f-surname" >Επίθετο</label>
-                            <input type="text" id="f-surname" name="surname" value=<?php echo $surname;?>>
-                            <p id="surname-txt" class="hidden"></p>
-
-                            <label for="f-email" >Email</label>
-                            <input readonly="true" type="text" id="f-email" name="email" value=<?php echo $email;?>>
-                            <p id="email-txt" class="hidden"></p>
-                        </div>
-
-                        <div class="well col-sm-3">
-                            <label for="f-amka" >ΑΜΚΑ</label>
-                            <input type="text" id="f-amka" name="amka" value=<?php echo $amka;?>>
-                            <p id="amka-txt" class="hidden"></p>
-                        <!-- </div> -->
-
-                        <!-- <div class="well"> -->
-                            <label for="f-afm" >ΑΦΜ</label>
-                            <input type="text" id="f-afm" name="afm" value=<?php echo $afm;?>>
-                            <p id="afm-txt" class="hidden"></p>
-                        </div>
-                        <br>
-                    </div>
-                    <input type="submit" class="btn btn-primary" value="Υποβολή" id="submit-edit-infos"/>
-                </form>
-                <button class="btn btn-primary" id="edit-infos"> Επεξεργασία</button>
-                <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> -->
+                <h1>Εκρεμείς Αιτήσεις</h1>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Αριθμός Πρωτόκολλο</th>
+                      <th scope="col">Τύπος</th>
+                      <th scope="col">Ημερομηνία</th>
+                      <th scope="col">Κατάσταση</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>                <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> -->
             </div>
         <!-- /#page-content-wrapper -->
         </div>
