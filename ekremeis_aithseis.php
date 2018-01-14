@@ -19,24 +19,8 @@ session_start();
         $conn = connectToDB("localhost", "root", "", "eamDatabase");
         mysqli_set_charset($conn, 'utf8');
 
-        $sql = "SELECT email, name, surname, amka, afm FROM user WHERE email='".$_SESSION["useremail"]."'";
+        $sql = "SELECT * FROM Applications WHERE user='".$_SESSION["useremail"]."'";
         $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
-            $email = $row["email"];
-            $name = $row["name"];
-            $surname = $row["surname"];
-            $amka = $row["amka"];
-            $afm = $row["afm"];
-        }else{
-            $email = "";
-            $name = "";
-            $surname = "";
-            $amka = "";
-            $afm = "";
-        }
-        mysqli_close($conn);
 
         function connectToDB($servername, $username, $password, $dbname)
         {
@@ -50,7 +34,9 @@ session_start();
             //echo "Connected successfully";
             return $conn;
         }
-    ?>
+
+        ?>
+
 
 
 
@@ -71,7 +57,7 @@ session_start();
                     <a href="#">Οι εφαρμογές μου</a>
                 </li>
                 <li>
-                    <a href="ekremeis_aithseis.php">Εκρεμείς αιτήσεις</a>
+                    <a href="ekremeis_aithseis.php">Οι Αιτήσεις μου</a>
                 </li>
             </ul>
         </div>
@@ -84,37 +70,46 @@ session_start();
           ?>
 
             <div id="main-cont" class="container-fluid">
-                <h1>Εκρεμείς Αιτήσεις</h1>
+                <h1>Οι Αιτήσεις Μου</h1>
+                <?php
+                if (mysqli_num_rows($result) > 0) {
+                ?>
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">Αριθμός Πρωτόκολλο</th>
+                      <th scope="col">Αριθμός Πρωτόκολλου</th>
                       <th scope="col">Τύπος</th>
                       <th scope="col">Ημερομηνία</th>
                       <th scope="col">Κατάσταση</th>
                     </tr>
                   </thead>
+
                   <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
+                      <?php
+                      while ($row = mysqli_fetch_array($result))
+                      {
+                          if($row['applicationDone']==0){
+                              echo "<tr class='not-done'>";
+                          }else{
+                              echo "<tr class='done'> ";
+                          }
+                      ?>
+                          <td><?php echo $row['id'] ?></td>
+                          <td><?php echo $row['applicationType'] ?></td>
+                          <td><?php echo $row['date'] ?></td>
+                          <td><?php echo $row['status'] ?></td>
+                      </tr>
+                      <?php
+                      }
+                      mysqli_close($conn);
+                      ?>
                   </tbody>
-                </table>                <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> -->
+                </table>
+                <?php
+                }
+                ?>
+
+                <!-- <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a> -->
             </div>
         <!-- /#page-content-wrapper -->
         </div>
@@ -124,7 +119,7 @@ session_start();
 
     <!-- Menu Toggle Script -->
     <script src="js/profile.js"></script>
-    
+
 
 </body>
 

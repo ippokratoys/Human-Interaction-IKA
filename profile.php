@@ -106,7 +106,7 @@ if(empty($_SESSION["useremail"])){
                     <a href="#">Οι εφαρμογές μου</a>
                 </li>
                 <li>
-                    <a href="ekremeis_aithseis.php">Εκρεμείς αιτήσεις</a>
+                    <a href="ekremeis_aithseis.php">Οι Αιτήσεις μου</a>
                 </li>
             </ul>
         </div>

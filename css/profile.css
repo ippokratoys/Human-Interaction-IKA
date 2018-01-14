@@ -136,3 +136,7 @@ body {
 #main-cont .well{
     margin: 10px;
 }
+
+.done{
+    background-color: lightgreen;
+}
