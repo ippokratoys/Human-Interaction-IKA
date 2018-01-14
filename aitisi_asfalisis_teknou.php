@@ -8,6 +8,7 @@ session_start();
   <?php
     include("refs.html");
   ?>
+  <title>Αίτηση Ασφάλισης Τέκνου - ΙΚΑ</title>
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="css/register.css">
 </head>

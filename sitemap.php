@@ -5,6 +5,7 @@ session_start();
 
 <html>
     <head>
+        <title>Πλοηγός - ΙΚΑ</title>
         <?php
             include("refs.html")
         ?>
@@ -28,11 +29,11 @@ session_start();
     </div>
 
     <div class="row" id="workers-grid">
-      
+
         <div class="col-sm-12">
             <h3>Σελίδες:</h3>
             <ul>
-                <li><a href="index.php"><strong>Αρχική</strong></a></li> 
+                <li><a href="index.php"><strong>Αρχική</strong></a></li>
                     <ul><li><a href="ergazomenoi.php">Εργαζόμενοι</a></li></ul> <ul><li><a href="ensyma.php">Υπολογισμός ενσήμων </a></li><li><a href="bebaiosh_ergasias.php">Βεβαίωση εργασίας</a></li><li><a href="aitisi_asfalisis_teknou.php">Αίτηση ασφάλισης τέκνου</a></li></ul>
 
                     <li><a href="ergodoths.php"><strong>Εργοδότες</strong></a></li>
@@ -49,10 +50,10 @@ session_start();
 
 
 
-                
-            </ul>   
+
+            </ul>
         </div>
-   
+
     </div>
 </div>
 

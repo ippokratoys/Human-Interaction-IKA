@@ -5,6 +5,7 @@ session_start();
 
 <html>
     <head>
+        <title>Συνταξιούχοι - ΙΚΑ</title>
     	<?php
     		include("refs.html")
     	?>

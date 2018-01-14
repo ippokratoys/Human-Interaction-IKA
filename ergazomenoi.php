@@ -9,6 +9,7 @@ session_start();
     		include("refs.html")
     	?>
 
+        <title>Εργαζόμενοι - ΙΚΑ</title>
     </head>
 <!-- Latest compiled and minified CSS -->
 <body>

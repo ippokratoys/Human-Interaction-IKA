@@ -12,6 +12,7 @@ session_start();
 
 </head>
       <link rel="stylesheet" href="css/register.css">
+      <title>Ενσημα - ΙΚΑ</title>
 
 <body>
 

@@ -8,6 +8,7 @@ session_start();
   <?php
     include("refs.html");
   ?>
+  <title>Αίτηση Συνταξιοδωτικού Βοηθήματος - ΙΚΑ</title>
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="css/register.css">
 </head>

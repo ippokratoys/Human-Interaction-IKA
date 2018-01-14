@@ -5,6 +5,7 @@ session_start();
 <html lang="en">
 
 <head>
+    <title>Υπολογισμός Δώρου - ΙΚΑ</title>
   <?php
     include("refs.html");
   ?>
@@ -38,7 +39,7 @@ session_start();
 
         </ol>
             <div class="row main">
-               
+
                 <div class="main-login main-center">
                   <form class="form-horizontal" method="post" id="upologismos_dwrou">
 

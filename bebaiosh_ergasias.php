@@ -8,6 +8,7 @@ session_start();
   <?php
     include("refs.html");
   ?>
+  <title>Βεβαίωση Εργασίας - ΙΚΑ</title>
   <!-- Custom styles for this template -->
 </head>
       <link rel="stylesheet" href="css/register.css">

@@ -4,6 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="el">
     <head>
+        <title>Εγγραφή - ΙΚΑ</title>
     	<meta charset=UTF-8>
     	<?php
     		include("refs.html");
